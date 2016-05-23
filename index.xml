@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chad Adams</title>
+    <link>http://chad-g-adams.github.io/</link>
+    <description>Recent content on Chad Adams</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>All rights reserved - 2016</copyright>
+    <lastBuildDate>Sat, 21 May 2016 11:36:01 -0400</lastBuildDate>
+    <atom:link href="http://chad-g-adams.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test</title>
+      <link>http://chad-g-adams.github.io/post/test/</link>
+      <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
+      
+      <guid>http://chad-g-adams.github.io/post/test/</guid>
+      <description>&lt;p&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
