@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Getting Started With Hugo &middot; Chad Adams</title>
+
+  
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/highlight/default.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://chad-g-adams.github.io/touch-icon-144-precomposed.png">
+  <link href="http://chad-g-adams.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Getting Started With Hugo">
+  <meta name="keywords" content="hugo,blog,static site,github pages,github,hyde-x">
+  
+</head>
+<body class="theme-base-0d">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Chad Adams</h1>
+      <p class="lead">Your favourite quote or soundbite.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://chad-g-adams.github.io/">Home</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/chad-g-adams"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/chizzadwick"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      
+      </li>
+    </ul>
+
+    
+    <p><script id='flattr'>
+      (function(id){
+        var s = document.getElementById(id);
+        var f = document.createElement('iframe');
+        f.src = '//api.flattr.com/button/view/?uid=&button=compact&url=http:\/\/chad-g-adams.github.io\/&title=Chad Adams';
+        f.title = 'Flattr';
+        f.height = 20;
+        f.width = 110;
+        f.style.borderWidth = 0;
+        s.parentNode.insertBefore(f, s);
+      })('flattr');
+    </script></p>
+    
+
+    <p>Copyright &copy; 2016 <a href="http://chad-g-adams.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Getting Started With Hugo</h1>
+    <span class="post-date">May 24, 2016 &middot; 3 minute read
+	 
+ 
+	
+ 
+	
+		   
+	
+ 
+
+
+	<br/>
+	
+	 
+		 
+	 
+		<a class="label" href="http://chad-g-adams.github.io/tags/hugo">hugo</a> 
+	
+
+
+ </span>
+    
+
+<h1 id="overview:86024dcf7244259db6089302c01d25e4">Overview</h1>
+
+<p>Setting up a website these days can be done at no cost other than a bit of time. I thought it would be interesting to spend a weekend playing around with some of the available tools. This article covers how I set up my site, using <a href="http://hugo.spf13.com/">Hugo</a> to generate my content, and [GitHub Pages]() to host.</p>
+
+<h1 id="hugo:86024dcf7244259db6089302c01d25e4">Hugo</h1>
+
+<p>For simple sites, such as blogs, there are good reasons to prefer static site generators:</p>
+
+<ul>
+<li><strong>Better security</strong>: everything becomes simple static content so it significantly limits the areas of exposure to hackers; there are no logins, passwords, etc.</li>
+<li><strong>Performance</strong>: the site will load quickly and be responsive</li>
+<li><strong>Offline editing</strong>: I can continue to create content when I&rsquo;m offline, although that is becoming less and less of an issue these days of ubiquitous networking..</li>
+</ul>
+
+<p><a href="http://hugo.spf13.com/">Hugo</a> is a static site generator written in Go. I chose Hugo because it was open source and seems quite popular with an active community, and because I also have an interest in learning the Go language (not that you need worry about that when building your website with Hugo).</p>
+
+<h1 id="hugo-workflow:86024dcf7244259db6089302c01d25e4">Hugo Workflow</h1>
+
+<p>Using Hugo was an absolute pleasure. There are <a href="https://gohugo.io/overview/quickstart/">good tutorials</a> on Hugo available, so I will just cover some of the highlights here to demonstrate how easy it is.</p>
+
+<h2 id="creating-a-new-site:86024dcf7244259db6089302c01d25e4">Creating a new site</h2>
+
+<p>One simple command will create you a new site</p>
+
+<pre><code>hugo new site mySiteName
+</code></pre>
+
+<p>This will create a new folder called <code>mySiteName/</code> and bootstrap it with the required directory structure.</p>
+
+<h2 id="create-new-content:86024dcf7244259db6089302c01d25e4">Create new content</h2>
+
+<p>Creating a new post is as simple as</p>
+
+<pre><code>hugo new post/my-post-name.md
+</code></pre>
+
+<p>The post file <code>my-post-name.md</code> appears in the <code>mySiteName/content/post/</code> directory.</p>
+
+<p>The basic premise of Hugo is that your content is organized in a specific way on purpose. Hence the filesystem organization of your content matches the URL at which it is hosted. For example content file at <code>content/foo/bar/myFirstPost.md</code> will be hosted at <code>&lt;site&gt;/foo/bar/myFirstPost</code> (By default - however that is fully configurable).</p>
+
+<h2 id="editing-content:86024dcf7244259db6089302c01d25e4">Editing content</h2>
+
+<p>Content is typically a plain text file (which means I am writing everything in vim, hooray!). Hugo has native support for <a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> language.</p>
+
+<p>Every content file begins with a section of metadata that allows you to specify information about the content, like the title, date, tags, or any arbitrary data you would use to classify your content.</p>
+
+<h2 id="pick-a-theme:86024dcf7244259db6089302c01d25e4">Pick a Theme</h2>
+
+<p>Next you pick a theme for your site. I used <strong><a href="https://github.com/zyro/hyde-x">hyde-x</a></strong>, with a few tweaks (more to come on that in a later post).</p>
+
+<h2 id="preview-your-site:86024dcf7244259db6089302c01d25e4">Preview Your Site</h2>
+
+<p>Alright, we have some content now, let&rsquo;s test it out. Hugo comes with a built-in HTTP server. Launch the server with a simple command</p>
+
+<pre><code>hugo serve
+</code></pre>
+
+<p>And connect a browser to the endpoint to view your site. Boom!</p>
+
+<p>Could it be any easier?</p>
+
+<p>Here&rsquo;s a cool feature: your browser <em>automatically updates instantly</em> as you edit your site&rsquo;s content! This makes the web development cycle a very tight loop.</p>
+
+<h2 id="publish-your-site:86024dcf7244259db6089302c01d25e4">Publish Your Site</h2>
+
+<p>Once you&rsquo;re satisfied with your site, it&rsquo;s time to publish. Running the command</p>
+
+<pre><code>hugo
+</code></pre>
+
+<p>Generates a folder <code>public/</code> with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a webserver, or hosted by an external service (such as GitHub Pages which I will be going into in my next post).</p>
+
+<h1 id="my-hugo-content:86024dcf7244259db6089302c01d25e4">My Hugo Content</h1>
+
+<p>For a reference project, the Hugo code for this website can be found on <a href="https://github.com/chad-g-adams/chad-g-adams-hugo">my github repo</a></p>
+
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://chad-g-adams.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+
