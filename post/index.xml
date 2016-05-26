@@ -20,7 +20,7 @@
 
 &lt;h1 id=&#34;overview:86024dcf7244259db6089302c01d25e4&#34;&gt;Overview&lt;/h1&gt;
 
-&lt;p&gt;Setting up a website these days can be done at no cost other than a bit of time. I thought it would be interesting to spend a weekend playing around with some of the available tools. This article covers how I set up my site, using &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; to generate my content, and [GitHub Pages]() to host.&lt;/p&gt;
+&lt;p&gt;Setting up a website these days can be done at no cost other than a bit of time. I thought it would be interesting to spend a weekend playing around with some of the available tools. This article covers how I set up my site, using &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; to generate my content, and &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; to host.&lt;/p&gt;
 
 &lt;h1 id=&#34;hugo:86024dcf7244259db6089302c01d25e4&#34;&gt;Hugo&lt;/h1&gt;
 
@@ -29,10 +29,10 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Better security&lt;/strong&gt;: everything becomes simple static content so it significantly limits the areas of exposure to hackers; there are no logins, passwords, etc.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: the site will load quickly and be responsive&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Offline editing&lt;/strong&gt;: I can continue to create content when I&amp;rsquo;m offline, although that is becoming less and less of an issue these days of ubiquitous networking..&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline editing&lt;/strong&gt;: I can continue to create content when I&amp;rsquo;m offline, although that is becoming less and less of an issue these days&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; is a static site generator written in Go. I chose Hugo because it was open source and seems quite popular with an active community, and because I also have an interest in learning the Go language (not that you need worry about that when building your website with Hugo).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; is a static site generator written in Go. I chose Hugo because it was open source with an active community, and because I also have an interest in learning the Go language (not that you need worry about that when building your website with Hugo).&lt;/p&gt;
 
 &lt;h1 id=&#34;hugo-workflow:86024dcf7244259db6089302c01d25e4&#34;&gt;Hugo Workflow&lt;/h1&gt;
 
@@ -60,7 +60,7 @@
 
 &lt;h2 id=&#34;editing-content:86024dcf7244259db6089302c01d25e4&#34;&gt;Editing content&lt;/h2&gt;
 
-&lt;p&gt;Content is typically a plain text file (which means I am writing everything in vim, hooray!). Hugo has native support for &lt;a href=&#34;http://daringfireball.net/projects/markdown/basics&#34;&gt;Markdown&lt;/a&gt; language.&lt;/p&gt;
+&lt;p&gt;Post content is generally a plain text file (which means I am writing everything in vim, hooray!). Hugo has native support for &lt;a href=&#34;http://daringfireball.net/projects/markdown/basics&#34;&gt;Markdown&lt;/a&gt; language.&lt;/p&gt;
 
 &lt;p&gt;Every content file begins with a section of metadata that allows you to specify information about the content, like the title, date, tags, or any arbitrary data you would use to classify your content.&lt;/p&gt;
 
@@ -79,7 +79,7 @@
 
 &lt;p&gt;Could it be any easier?&lt;/p&gt;
 
-&lt;p&gt;Here&amp;rsquo;s a cool feature: your browser &lt;em&gt;automatically updates instantly&lt;/em&gt; as you edit your site&amp;rsquo;s content! This makes the web development cycle a very tight loop.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a cool feature: your browser &lt;em&gt;automatically updates instantly&lt;/em&gt; as you edit your site&amp;rsquo;s content! This makes your web development cycle a very tight loop.&lt;/p&gt;
 
 &lt;h2 id=&#34;publish-your-site:86024dcf7244259db6089302c01d25e4&#34;&gt;Publish Your Site&lt;/h2&gt;
 
@@ -88,11 +88,11 @@
 &lt;pre&gt;&lt;code&gt;hugo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Generates a folder &lt;code&gt;public/&lt;/code&gt; with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a webserver, or hosted by an external service (such as GitHub Pages which I will be going into in my next post).&lt;/p&gt;
+&lt;p&gt;Generates a folder &lt;code&gt;public/&lt;/code&gt; with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a web server, or hosted by an external service (such as GitHub Pages - I will be going into that in my next post).&lt;/p&gt;
 
 &lt;h1 id=&#34;my-hugo-content:86024dcf7244259db6089302c01d25e4&#34;&gt;My Hugo Content&lt;/h1&gt;
 
-&lt;p&gt;For a reference project, the Hugo code for this website can be found on &lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams-hugo&#34;&gt;my github repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For reference, the Hugo code for this website can be found on my github repo &lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams-hugo&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -102,63 +102,6 @@
       <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
       
       <guid>http://chad-g-adams.github.io/blog/2016/05/21/first-post/</guid>
-      <description>&lt;p&gt;Testing 1, 2, 3&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Generated by &lt;a href=&#34;http://loremdimsum.com/&#34;&gt;Lorem Dim Sum&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Welcome to my &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; blog. Hungry yet? :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First Post2</title>
-      <link>http://chad-g-adams.github.io/blog/2016/05/21/first-post2/</link>
-      <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
-      
-      <guid>http://chad-g-adams.github.io/blog/2016/05/21/first-post2/</guid>
-      <description>&lt;p&gt;Testing 1, 2, 3&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Generated by &lt;a href=&#34;http://loremdimsum.com/&#34;&gt;Lorem Dim Sum&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Welcome to my &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; blog. Hungry yet? :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First Post3</title>
-      <link>http://chad-g-adams.github.io/blog/2016/05/21/first-post3/</link>
-      <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
-      
-      <guid>http://chad-g-adams.github.io/blog/2016/05/21/first-post3/</guid>
-      <description>&lt;p&gt;Testing 1, 2, 3&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Generated by &lt;a href=&#34;http://loremdimsum.com/&#34;&gt;Lorem Dim Sum&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Welcome to my &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; blog. Hungry yet? :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First Post3</title>
-      <link>http://chad-g-adams.github.io/blog/2016/05/21/first-post3/</link>
-      <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
-      
-      <guid>http://chad-g-adams.github.io/blog/2016/05/21/first-post3/</guid>
       <description>&lt;p&gt;Testing 1, 2, 3&amp;hellip;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan

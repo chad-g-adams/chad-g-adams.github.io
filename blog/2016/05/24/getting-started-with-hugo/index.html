@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="http://chad-g-adams.github.io/css/highlight/default.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
+  <link rel="stylesheet" href="http://chad-g-adams.github.io/css/chad.css">
 
   
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://chad-g-adams.github.io/touch-icon-144-precomposed.png">
@@ -29,21 +29,25 @@
   
   
 
-  <meta name="description" content="Getting Started With Hugo">
+  <meta name="description" content="Getting Started With Hugo, a static site generator">
   <meta name="keywords" content="hugo,blog,static site,github pages,github,hyde-x">
   
 </head>
-<body class="theme-base-0d">
+<body class="theme-chad">
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       
       <h1>Chad Adams</h1>
-      <p class="lead">Your favourite quote or soundbite.</p>
+      <p class="lead">Welcome</p>
     </div>
 
     <ul class="sidebar-nav">
-      <li class="sidebar-nav-item"><a href="http://chad-g-adams.github.io/">Home</a></li>
+      <li class="sidebar-nav-item"><a href="http://chad-g-adams.github.io/"></a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-book'></i><a href="http://chad-g-adams.github.io/"> My Blog</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-keyboard-o'></i><a href="http://chad-g-adams.github.io/categories/code/"> Coding Adventures</a></li>
       
     </ul>
 
@@ -57,23 +61,10 @@
       
       <a href="https://twitter.com/chizzadwick"><i class="fa fa-twitter-square fa-3x"></i></a>
       
-      
+      <a href="http://chad-g-adams.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
       </li>
     </ul>
 
-    
-    <p><script id='flattr'>
-      (function(id){
-        var s = document.getElementById(id);
-        var f = document.createElement('iframe');
-        f.src = '//api.flattr.com/button/view/?uid=&button=compact&url=http:\/\/chad-g-adams.github.io\/&title=Chad Adams';
-        f.title = 'Flattr';
-        f.height = 20;
-        f.width = 110;
-        f.style.borderWidth = 0;
-        s.parentNode.insertBefore(f, s);
-      })('flattr');
-    </script></p>
     
 
     <p>Copyright &copy; 2016 <a href="http://chad-g-adams.github.io/license/">License</a><br/>
@@ -89,8 +80,6 @@
 	 
  
 	
- 
-	
 		   
 	
  
@@ -99,9 +88,7 @@
 	<br/>
 	
 	 
-		 
-	 
-		<a class="label" href="http://chad-g-adams.github.io/tags/hugo">hugo</a> 
+		<a class="label" href="http://chad-g-adams.github.io/tags/hugo">hugo</a><a class="label" href="http://chad-g-adams.github.io/tags/blog">blog</a> 
 	
 
 
@@ -110,7 +97,7 @@
 
 <h1 id="overview:86024dcf7244259db6089302c01d25e4">Overview</h1>
 
-<p>Setting up a website these days can be done at no cost other than a bit of time. I thought it would be interesting to spend a weekend playing around with some of the available tools. This article covers how I set up my site, using <a href="http://hugo.spf13.com/">Hugo</a> to generate my content, and [GitHub Pages]() to host.</p>
+<p>Setting up a website these days can be done at no cost other than a bit of time. I thought it would be interesting to spend a weekend playing around with some of the available tools. This article covers how I set up my site, using <a href="http://hugo.spf13.com/">Hugo</a> to generate my content, and <a href="https://pages.github.com/">GitHub Pages</a> to host.</p>
 
 <h1 id="hugo:86024dcf7244259db6089302c01d25e4">Hugo</h1>
 
@@ -119,10 +106,10 @@
 <ul>
 <li><strong>Better security</strong>: everything becomes simple static content so it significantly limits the areas of exposure to hackers; there are no logins, passwords, etc.</li>
 <li><strong>Performance</strong>: the site will load quickly and be responsive</li>
-<li><strong>Offline editing</strong>: I can continue to create content when I&rsquo;m offline, although that is becoming less and less of an issue these days of ubiquitous networking..</li>
+<li><strong>Offline editing</strong>: I can continue to create content when I&rsquo;m offline, although that is becoming less and less of an issue these days</li>
 </ul>
 
-<p><a href="http://hugo.spf13.com/">Hugo</a> is a static site generator written in Go. I chose Hugo because it was open source and seems quite popular with an active community, and because I also have an interest in learning the Go language (not that you need worry about that when building your website with Hugo).</p>
+<p><a href="http://hugo.spf13.com/">Hugo</a> is a static site generator written in Go. I chose Hugo because it was open source with an active community, and because I also have an interest in learning the Go language (not that you need worry about that when building your website with Hugo).</p>
 
 <h1 id="hugo-workflow:86024dcf7244259db6089302c01d25e4">Hugo Workflow</h1>
 
@@ -150,7 +137,7 @@
 
 <h2 id="editing-content:86024dcf7244259db6089302c01d25e4">Editing content</h2>
 
-<p>Content is typically a plain text file (which means I am writing everything in vim, hooray!). Hugo has native support for <a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> language.</p>
+<p>Post content is generally a plain text file (which means I am writing everything in vim, hooray!). Hugo has native support for <a href="http://daringfireball.net/projects/markdown/basics">Markdown</a> language.</p>
 
 <p>Every content file begins with a section of metadata that allows you to specify information about the content, like the title, date, tags, or any arbitrary data you would use to classify your content.</p>
 
@@ -169,7 +156,7 @@
 
 <p>Could it be any easier?</p>
 
-<p>Here&rsquo;s a cool feature: your browser <em>automatically updates instantly</em> as you edit your site&rsquo;s content! This makes the web development cycle a very tight loop.</p>
+<p>Here&rsquo;s a cool feature: your browser <em>automatically updates instantly</em> as you edit your site&rsquo;s content! This makes your web development cycle a very tight loop.</p>
 
 <h2 id="publish-your-site:86024dcf7244259db6089302c01d25e4">Publish Your Site</h2>
 
@@ -178,11 +165,11 @@
 <pre><code>hugo
 </code></pre>
 
-<p>Generates a folder <code>public/</code> with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a webserver, or hosted by an external service (such as GitHub Pages which I will be going into in my next post).</p>
+<p>Generates a folder <code>public/</code> with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a web server, or hosted by an external service (such as GitHub Pages - I will be going into that in my next post).</p>
 
 <h1 id="my-hugo-content:86024dcf7244259db6089302c01d25e4">My Hugo Content</h1>
 
-<p>For a reference project, the Hugo code for this website can be found on <a href="https://github.com/chad-g-adams/chad-g-adams-hugo">my github repo</a></p>
+<p>For reference, the Hugo code for this website can be found on my github repo <a href="https://github.com/chad-g-adams/chad-g-adams-hugo">here</a></p>
 
   </div>
   
