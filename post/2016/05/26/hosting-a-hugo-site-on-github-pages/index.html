@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Hugo &middot; Chad Adams</title>
+  <title>Hosting a Hugo site on GitHub Pages &middot; Chad Adams</title>
 
   
   <link rel="stylesheet" href="http://chad-g-adams.github.io/css/poole.css">
@@ -27,9 +27,9 @@
   
   
   
-  <link href="http://chad-g-adams.github.io/tags/hugo/index.xml" rel="alternate" type="application/rss+xml" title="Chad Adams &middot; Chad Adams" />
+  
 
-  <meta name="description" content="Chad Adams">
+  <meta name="description" content="Hosting a Hugo site on GitHub Pages">
   <meta name="keywords" content="code">
   
 </head>
@@ -74,10 +74,10 @@
 
 
 <div class="content container">
-  <ul class="posts">
-  
-    <li><a href="http://chad-g-adams.github.io/post/2016/05/26/hosting-a-hugo-site-on-github-pages/">Hosting a Hugo site on GitHub Pages</a>
-     
+  <div class="post">
+    <h1 class="post-title">Hosting a Hugo site on GitHub Pages</h1>
+    <span class="post-date">May 26, 2016 &middot; 2 minute read
+	 
  
 	
 		   
@@ -85,35 +85,61 @@
  
 
 
-	&middot;
+	<br/>
 	
 	 
 		<a class="label" href="http://chad-g-adams.github.io/tags/github-pages">github pages</a><a class="label" href="http://chad-g-adams.github.io/tags/hugo">hugo</a><a class="label" href="http://chad-g-adams.github.io/tags/blog">blog</a> 
 	
 
 
-    &middot; <time>May 26, 2016</time></li>
+ </span>
+    
+
+<p>In my <a href="post/2016/05/24/getting-started-with-hugo/">previous post</a>, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.</p>
+
+<h1 id="github-pages:880a44ed049d0dd561a1cb819f7c9037">GitHub Pages</h1>
+
+<p>GitHub Pages is a website hosting service provided by GitHub. If you are willing to publish your website in a git repository on GitHub then GitHub Pages will serve your website for free.</p>
+
+<p>The requirements are that your github repo must be named <code>&lt;username&gt;.github.io</code> and the repo should contain an index.html file.</p>
+
+<h1 id="github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037">GitHub Pages and Hugo</h1>
+
+<p>As mentioned in my <a href="post/2016/05/24/getting-started-with-hugo/">previous post</a> Hugo generates a <code>public/</code> directory with the full contents of the website. In order to host that on GitHub Pages, we&rsquo;ll simply need to put the contents of the <code>public/</code> folder in an appropriately named github repo:</p>
+
+<ul>
+<li><a href="https://github.com/chad-g-adams/chad-g-adams.github.io">chad-g-adams.github.io</a></li>
+</ul>
+
+<p>After a few minutes, the website will be live at <a href="http://chad-g-adams.github.io/">http://chad-g-adams.github.io/</a></p>
+
+<h1 id="syncing-hugo-content-with-github-pages:880a44ed049d0dd561a1cb819f7c9037">Syncing Hugo content with GitHub Pages</h1>
+
+<p>Now we have two git repositories.</p>
+
+<ul>
+<li>One for holding the website content: <a href="https://github.com/chad-g-adams/chad-g-adams-hugo">chad-g-adams-hugo</a></li>
+<li>And one for holding the actual generated website which is used for hosting: <a href="https://github.com/chad-g-adams/chad-g-adams.github.io">chad-g-adams.github.io</a></li>
+</ul>
+
+<p>The issue is, when I make changes to my site content (by working in the first repo), I would like to see those changes applied to second repo so that it can take effect on <a href="http://chad-g-adams.github.io/">http://chad-g-adams.github.io/</a></p>
+
+<p>My Hugo repo has the following directory structure.</p>
+
+<p>When I publish my website using command</p>
+
+<pre><code>hugo serve
+</code></pre>
+
+<p>Another folder called <code>public/</code> is generated there. Wouldn&rsquo;t it be great that folder could be part of the second git repo? In other words, having one git repo inside of another?  This can be accomplished using git submodules</p>
+
+  </div>
   
-    <li><a href="http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/">Getting Started With Hugo</a>
-     
- 
-	
-		   
-	
- 
-
-
-	&middot;
-	
-	 
-		<a class="label" href="http://chad-g-adams.github.io/tags/hugo">hugo</a><a class="label" href="http://chad-g-adams.github.io/tags/blog">blog</a> 
-	
-
-
-    &middot; <time>May 24, 2016</time></li>
-  
-  </ul>
 </div>
+
+
+
+
 <script src="http://chad-g-adams.github.io/js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 </body>
