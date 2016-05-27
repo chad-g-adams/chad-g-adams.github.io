@@ -76,7 +76,7 @@
 <div class="content container">
   <div class="post">
     <h1 class="post-title">Hosting a Hugo site on GitHub Pages</h1>
-    <span class="post-date">May 26, 2016 &middot; 2 minute read
+    <span class="post-date">May 26, 2016 &middot; 3 minute read
 	 
  
 	
@@ -95,7 +95,7 @@
  </span>
     
 
-<p>In my <a href="post/2016/05/24/getting-started-with-hugo/">previous post</a>, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.</p>
+<p>In my <a href="http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/">previous post</a>, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.</p>
 
 <h1 id="github-pages:880a44ed049d0dd561a1cb819f7c9037">GitHub Pages</h1>
 
@@ -105,7 +105,7 @@
 
 <h1 id="github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037">GitHub Pages and Hugo</h1>
 
-<p>As mentioned in my <a href="post/2016/05/24/getting-started-with-hugo/">previous post</a> Hugo generates a <code>public/</code> directory with the full contents of the website. In order to host that on GitHub Pages, we&rsquo;ll simply need to put the contents of the <code>public/</code> folder in an appropriately named github repo:</p>
+<p>As mentioned in my <a href="http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/">previous post</a> Hugo generates a <code>public/</code> directory with the full contents of the website. In order to host that on GitHub Pages, we&rsquo;ll simply need to put the contents of the <code>public/</code> folder in an appropriately named github repo:</p>
 
 <ul>
 <li><a href="https://github.com/chad-g-adams/chad-g-adams.github.io">chad-g-adams.github.io</a></li>
@@ -124,14 +124,39 @@
 
 <p>The issue is, when I make changes to my site content (by working in the first repo), I would like to see those changes applied to second repo so that it can take effect on <a href="http://chad-g-adams.github.io/">http://chad-g-adams.github.io/</a></p>
 
-<p>My Hugo repo has the following directory structure.</p>
+<p>While inside my first repository, when I generate my website using command <code>hugo serve</code>a folder called <code>public/</code> is generated in the working directory. Wouldn&rsquo;t it be great if that folder could be automatically part of the second git repo? In other words, having one git repo inside of another?</p>
 
-<p>When I publish my website using command</p>
+<p>This can be accomplished in different ways. Probably the simplest way is to add <code>public/</code> to <code>.gitignore</code> of the parent repo, and then clone the child repo separately into that directory.</p>
 
-<pre><code>hugo serve
+<p>Another way is to use <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a>. This allows you to keep a git repository as a subdirectory of another git repository. The advantage is that when you run <code>git status</code> in the parent repo it will now also summarize the status of the child repo to remind you if there are outstanding changes</p>
+
+<pre><code>modified:   public/ (new commits, modified content)
 </code></pre>
 
-<p>Another folder called <code>public/</code> is generated there. Wouldn&rsquo;t it be great that folder could be part of the second git repo? In other words, having one git repo inside of another?  This can be accomplished using git submodules</p>
+<p>Either way, Hugo will now generate the site content directly into the second repo where it can then be easily committed and pushed.</p>
+
+<h2 id="a-note-on-hugo-generation:880a44ed049d0dd561a1cb819f7c9037">A note on Hugo generation</h2>
+
+<p>Hugo assumes the <code>public/</code> directory is empty when it generates the content. For that reason you should clean out the directory before re-generation or you risk deleted posts/pages living on.</p>
+
+<h1 id="automating-the-deploy-steps:880a44ed049d0dd561a1cb819f7c9037">Automating the Deploy Steps</h1>
+
+<p>In order to automate the various steps required to deploy my website, I created a simple script <code>deploy.sh</code> to run all the steps in one shot.</p>
+
+<pre><code>#!/usr/bin/sh
+
+# clean any old website data
+rm -r public/*
+
+# generate new website data
+hugo
+
+# commit and push the new content
+cd public
+git add -A
+git commit -m &quot;website update&quot;
+git push origin master
+</code></pre>
 
   </div>
   

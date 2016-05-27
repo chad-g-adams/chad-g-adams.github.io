@@ -18,7 +18,7 @@
       <guid>http://chad-g-adams.github.io/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
       <description>
 
-&lt;p&gt;In my &lt;a href=&#34;post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
 
 &lt;h1 id=&#34;github-pages:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages&lt;/h1&gt;
 
@@ -28,7 +28,7 @@
 
 &lt;h1 id=&#34;github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages and Hugo&lt;/h1&gt;
 
-&lt;p&gt;As mentioned in my &lt;a href=&#34;post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
+&lt;p&gt;As mentioned in my &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams.github.io&#34;&gt;chad-g-adams.github.io&lt;/a&gt;&lt;/li&gt;
@@ -47,14 +47,39 @@
 
 &lt;p&gt;The issue is, when I make changes to my site content (by working in the first repo), I would like to see those changes applied to second repo so that it can take effect on &lt;a href=&#34;http://chad-g-adams.github.io/&#34;&gt;http://chad-g-adams.github.io/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;My Hugo repo has the following directory structure.&lt;/p&gt;
+&lt;p&gt;While inside my first repository, when I generate my website using command &lt;code&gt;hugo serve&lt;/code&gt;a folder called &lt;code&gt;public/&lt;/code&gt; is generated in the working directory. Wouldn&amp;rsquo;t it be great if that folder could be automatically part of the second git repo? In other words, having one git repo inside of another?&lt;/p&gt;
 
-&lt;p&gt;When I publish my website using command&lt;/p&gt;
+&lt;p&gt;This can be accomplished in different ways. Probably the simplest way is to add &lt;code&gt;public/&lt;/code&gt; to &lt;code&gt;.gitignore&lt;/code&gt; of the parent repo, and then clone the child repo separately into that directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;hugo serve
+&lt;p&gt;Another way is to use &lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Tools-Submodules&#34;&gt;git submodules&lt;/a&gt;. This allows you to keep a git repository as a subdirectory of another git repository. The advantage is that when you run &lt;code&gt;git status&lt;/code&gt; in the parent repo it will now also summarize the status of the child repo to remind you if there are outstanding changes&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;modified:   public/ (new commits, modified content)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Another folder called &lt;code&gt;public/&lt;/code&gt; is generated there. Wouldn&amp;rsquo;t it be great that folder could be part of the second git repo? In other words, having one git repo inside of another?  This can be accomplished using git submodules&lt;/p&gt;
+&lt;p&gt;Either way, Hugo will now generate the site content directly into the second repo where it can then be easily committed and pushed.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-note-on-hugo-generation:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;A note on Hugo generation&lt;/h2&gt;
+
+&lt;p&gt;Hugo assumes the &lt;code&gt;public/&lt;/code&gt; directory is empty when it generates the content. For that reason you should clean out the directory before re-generation or you risk deleted posts/pages living on.&lt;/p&gt;
+
+&lt;h1 id=&#34;automating-the-deploy-steps:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;Automating the Deploy Steps&lt;/h1&gt;
+
+&lt;p&gt;In order to automate the various steps required to deploy my website, I created a simple script &lt;code&gt;deploy.sh&lt;/code&gt; to run all the steps in one shot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/sh
+
+# clean any old website data
+rm -r public/*
+
+# generate new website data
+hugo
+
+# commit and push the new content
+cd public
+git add -A
+git commit -m &amp;quot;website update&amp;quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
