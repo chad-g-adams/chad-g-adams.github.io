@@ -7,8 +7,35 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Thu, 26 May 2016 11:57:11 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 29 May 2016 15:46:05 -0400</lastBuildDate>
     <atom:link href="http://chad-g-adams.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Customizing Hugo Themes</title>
+      <link>http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/</link>
+      <pubDate>Sun, 29 May 2016 15:46:05 -0400</pubDate>
+      
+      <guid>http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; has a straight forward yet powerful strategy for theming websites.&lt;/p&gt;
+
+&lt;p&gt;The first step is to &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;choose a theme&lt;/a&gt; to use, as your baseline. In an &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/&#34;&gt;earlier post&lt;/a&gt;, I mentioned that I picked &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; for this website. I liked the general design of Hyde but wanted the extra features provided by Hyde-X such as pagination.&lt;/p&gt;
+
+&lt;p&gt;At this point your website will take on the default appearance of the theme. Most themes will also support some kind of configuration parameters out of the box, so this is usually the first step towards customization. For example, Hyde-X lets you configure your social media links, what syntax highlighting to use, and how you want your content paginated.&lt;/p&gt;
+
+&lt;p&gt;At some point you might want to tweak your website in a way that is not directly configurable through the theme. This is normal and expected, since everyone has unique needs for their sites.&lt;/p&gt;
+
+&lt;p&gt;Fortunately Hugo has a general convention for &lt;a href=&#34;https://gohugo.io/themes/customizing/&#34;&gt;overriding themes&lt;/a&gt;. Hugo lets you supplement or override any template or static file (which includes stuff like CSS, etc). Hence when you customize a theme, you don&amp;rsquo;t edit the theme&amp;rsquo;s files directly. Rather, you supply your own versions of those files, which then take precendence over that of the theme.&lt;/p&gt;
+
+&lt;p&gt;One simple example is for the favicon. I simply dropped my custom icon into&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static/favicon.png
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that takes precendence over the theme&amp;rsquo;s file of the same name.&lt;/p&gt;
+
+&lt;p&gt;In my next post I will go a bit further into more complex customizations.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hosting a Hugo site on GitHub Pages</title>
