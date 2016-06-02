@@ -26,7 +26,7 @@
 
 &lt;p&gt;Fortunately Hugo has a general convention for &lt;a href=&#34;https://gohugo.io/themes/customizing/&#34;&gt;overriding themes&lt;/a&gt;. Hugo lets you supplement or override any template or static file (which includes stuff like CSS, etc). Hence when you customize a theme, you don&amp;rsquo;t edit the theme&amp;rsquo;s files directly. Rather, you supply your own versions of those files, which then take precendence over that of the theme.&lt;/p&gt;
 
-&lt;p&gt;One simple example is for the favicon. I simply dropped my custom icon into&lt;/p&gt;
+&lt;p&gt;One simple example is the favicon. I simply dropped my custom icon into&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;static/favicon.png
 &lt;/code&gt;&lt;/pre&gt;
