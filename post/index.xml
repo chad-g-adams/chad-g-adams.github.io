@@ -7,8 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Sun, 29 May 2016 15:46:05 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jun 2016 10:53:47 -0400</lastBuildDate>
     <atom:link href="http://chad-g-adams.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Working with Hugo Templates</title>
+      <link>http://chad-g-adams.github.io/post/2016/06/04/working-with-hugo-templates/</link>
+      <pubDate>Sat, 04 Jun 2016 10:53:47 -0400</pubDate>
+      
+      <guid>http://chad-g-adams.github.io/post/2016/06/04/working-with-hugo-templates/</guid>
+      <description>
+
+&lt;p&gt;Hugo uses templates to generate HTML pages. This lets you control your generated HTML content with the help of simple logic. For example, logic such as ranging over all blog posts so that you can print them one at a time onto the page. Hugo uses the &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;Go html/template&lt;/a&gt; library.&lt;/p&gt;
+
+&lt;p&gt;A template can describe an entire page, or just a small portion of a page (for example, just the copyright notice, the header, the footer, etc.). When this happens it is called a &lt;em&gt;partial template&lt;/em&gt;, and that template can be reused just about anywhere else in your website.  Partials are especially useful in Hugo themes, as it gives you the option to override just a small part of the layout to suit your needs. As mentioned in my &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/&#34;&gt;previous post&lt;/a&gt;, overriding any file in a theme is as simple as dropping in your own version of the file with the same name. Thus templates can be overriden the same way.&lt;/p&gt;
+
+&lt;h1 id=&#34;modifying-the-hyde-x-theme:aca756b519d0e7970786722619fbfdb0&#34;&gt;Modifying the Hyde-X theme&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; theme by default provides nice looking links at the top of each post, based on the post&amp;rsquo;s meta content (such as the links marked &amp;ldquo;hugo&amp;rdquo; and &amp;ldquo;blog&amp;rdquo; which you can see at the top of this post). However, Hyde-X only supports those links for &lt;em&gt;categories&lt;/em&gt;, and I wanted links for &lt;em&gt;tags&lt;/em&gt;, which are two different meta data taxonomies.&lt;/p&gt;
+
+&lt;p&gt;This brought me to my first encounter with Hugo templating.&lt;/p&gt;
+
+&lt;p&gt;To solve this, first I extracted the links section into its own partial template, where it could be customized independently from the rest of the theme. Then I made a configuration item to control which taxonomies to create links for.&lt;/p&gt;
+
+&lt;p&gt;Here are some of the quirks I encountered along the way:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Appending strings&lt;/em&gt;. The Hugo template language has limited support for many of the features available in Go. I needed to append the &lt;code&gt;/&lt;/code&gt; character to a variable, but there is no append function. Turns out this can be done with &lt;a href=&#34;https://discuss.gohugo.io/t/concatenating-strings-with-print/711&#34;&gt;print function&lt;/a&gt;: &lt;code&gt;(print $itemToLink &amp;quot;/&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Passing values to partial templates&lt;/em&gt;. After generating the links, the theme either needs to print a newline following the links (in case of blog post), or else print a dot separator (in case of list view, as seen when you click on one of the tag links). Hence I wanted to give a parameter to my partial template to specify how to handle the separator. Solution: this can be achieved by &lt;a href=&#34;http://gohugo.io/templates/functions#dict&#34;&gt;passing a map into a partial&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Variable scope&lt;/em&gt;. I needed a way to check if a post had any links to display, and so I wanted to store this in a flag variable. However, ranging over a collection creates a new scope and so all modifications to variables within (such as the flag) are lost outside this scope. The solution was to use Hugo&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/extras/scratch/&#34;&gt;Scratch&lt;/a&gt; feature.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;contributing-back:aca756b519d0e7970786722619fbfdb0&#34;&gt;Contributing back&lt;/h1&gt;
+
+&lt;p&gt;Instead of overriding the theme just on my own personal website, I thought this feature could be generally useful to others who are using the theme. So I made a &lt;a href=&#34;https://github.com/zyro/hyde-x/pull/65&#34;&gt;pull request&lt;/a&gt; to contribute this back to the community.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Customizing Hugo Themes</title>

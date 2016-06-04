@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Customizing Hugo Themes &middot; Chad Adams</title>
+  <title>Working with Hugo Templates &middot; Chad Adams</title>
 
   
   <link rel="stylesheet" href="http://chad-g-adams.github.io/css/poole.css">
@@ -29,8 +29,8 @@
   
   
 
-  <meta name="description" content="Chad Adams">
-  <meta name="keywords" content="hugo,customization,theme,tutorial">
+  <meta name="description" content="Working with Hugo templates">
+  <meta name="keywords" content="hugo,tutorial,customization,theme,template,hyde-x">
   
 </head>
 <body class="theme-chad">
@@ -75,8 +75,8 @@
 
 <div class="content container">
   <div class="post">
-    <h1 class="post-title">Customizing Hugo Themes</h1>
-    <span class="post-date">May 29, 2016 &middot; 2 minute read &middot; <a href="http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/#disqus_thread">Comments</a>
+    <h1 class="post-title">Working with Hugo Templates</h1>
+    <span class="post-date">Jun 4, 2016 &middot; 3 minute read &middot; <a href="http://chad-g-adams.github.io/post/2016/06/04/working-with-hugo-templates/#disqus_thread">Comments</a>
 	 
  
 	
@@ -93,24 +93,31 @@
 
 
  </span>
-    <p><a href="http://hugo.spf13.com/">Hugo</a> has a straight forward yet powerful strategy for theming websites.</p>
+    
 
-<p>The first step is to <a href="http://themes.gohugo.io/">choose a theme</a> to use, as your baseline. In an <a href="http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/">earlier post</a>, I mentioned that I picked <a href="https://github.com/zyro/hyde-x">Hyde-X</a> for this website. I liked the general design of Hyde but wanted the extra features provided by Hyde-X such as pagination.</p>
+<p>Hugo uses templates to generate HTML pages. This lets you control your generated HTML content with the help of simple logic. For example, logic such as ranging over all blog posts so that you can print them one at a time onto the page. Hugo uses the <a href="https://golang.org/pkg/html/template/">Go html/template</a> library.</p>
 
-<p>At this point your website will take on the default appearance of the theme. Most themes will also support some kind of configuration parameters out of the box, so this is usually the first step towards customization. For example, Hyde-X lets you configure your social media links, what syntax highlighting to use, and how you want your content paginated.</p>
+<p>A template can describe an entire page, or just a small portion of a page (for example, just the copyright notice, the header, the footer, etc.). When this happens it is called a <em>partial template</em>, and that template can be reused just about anywhere else in your website.  Partials are especially useful in Hugo themes, as it gives you the option to override just a small part of the layout to suit your needs. As mentioned in my <a href="http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/">previous post</a>, overriding any file in a theme is as simple as dropping in your own version of the file with the same name. Thus templates can be overriden the same way.</p>
 
-<p>At some point you might want to tweak your website in a way that is not directly configurable through the theme. This is normal and expected, since everyone has unique needs for their sites.</p>
+<h1 id="modifying-the-hyde-x-theme:aca756b519d0e7970786722619fbfdb0">Modifying the Hyde-X theme</h1>
 
-<p>Fortunately Hugo has a general convention for <a href="https://gohugo.io/themes/customizing/">overriding themes</a>. Hugo lets you supplement or override any template or static file (which includes stuff like CSS, etc). Hence when you customize a theme, you don&rsquo;t edit the theme&rsquo;s files directly. Rather, you supply your own versions of those files, which then take precendence over that of the theme.</p>
+<p>The <a href="https://github.com/zyro/hyde-x">Hyde-X</a> theme by default provides nice looking links at the top of each post, based on the post&rsquo;s meta content (such as the links marked &ldquo;hugo&rdquo; and &ldquo;blog&rdquo; which you can see at the top of this post). However, Hyde-X only supports those links for <em>categories</em>, and I wanted links for <em>tags</em>, which are two different meta data taxonomies.</p>
 
-<p>One simple example is the favicon. I simply dropped my custom icon into</p>
+<p>This brought me to my first encounter with Hugo templating.</p>
 
-<pre><code>static/favicon.png
-</code></pre>
+<p>To solve this, first I extracted the links section into its own partial template, where it could be customized independently from the rest of the theme. Then I made a configuration item to control which taxonomies to create links for.</p>
 
-<p>And that takes precendence over the theme&rsquo;s file of the same name.</p>
+<p>Here are some of the quirks I encountered along the way:</p>
 
-<p>In my next post I will go a bit further into more complex customizations.</p>
+<ul>
+<li><em>Appending strings</em>. The Hugo template language has limited support for many of the features available in Go. I needed to append the <code>/</code> character to a variable, but there is no append function. Turns out this can be done with <a href="https://discuss.gohugo.io/t/concatenating-strings-with-print/711">print function</a>: <code>(print $itemToLink &quot;/&quot;)</code></li>
+<li><em>Passing values to partial templates</em>. After generating the links, the theme either needs to print a newline following the links (in case of blog post), or else print a dot separator (in case of list view, as seen when you click on one of the tag links). Hence I wanted to give a parameter to my partial template to specify how to handle the separator. Solution: this can be achieved by <a href="http://gohugo.io/templates/functions#dict">passing a map into a partial</a>.</li>
+<li><em>Variable scope</em>. I needed a way to check if a post had any links to display, and so I wanted to store this in a flag variable. However, ranging over a collection creates a new scope and so all modifications to variables within (such as the flag) are lost outside this scope. The solution was to use Hugo&rsquo;s <a href="https://gohugo.io/extras/scratch/">Scratch</a> feature.</li>
+</ul>
+
+<h1 id="contributing-back:aca756b519d0e7970786722619fbfdb0">Contributing back</h1>
+
+<p>Instead of overriding the theme just on my own personal website, I thought this feature could be generally useful to others who are using the theme. So I made a <a href="https://github.com/zyro/hyde-x/pull/65">pull request</a> to contribute this back to the community.</p>
 
   </div>
   <div id="disqus_thread"></div>
