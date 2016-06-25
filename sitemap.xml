@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://chad-g-adams.github.io/</loc>
+    <loc>http://cadams.ca/</loc>
     <lastmod>2016-06-04T10:53:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://chad-g-adams.github.io/post/2016/06/04/working-with-hugo-templates/</loc>
+    <loc>http://cadams.ca/post/2016/06/04/working-with-hugo-templates/</loc>
     <lastmod>2016-06-04T10:53:47-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/</loc>
+    <loc>http://cadams.ca/post/2016/05/29/customizing-hugo-themes/</loc>
     <lastmod>2016-05-29T15:46:05-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chad-g-adams.github.io/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</loc>
+    <loc>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</loc>
     <lastmod>2016-05-26T11:57:11-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/</loc>
+    <loc>http://cadams.ca/post/2016/05/24/getting-started-with-hugo/</loc>
     <lastmod>2016-05-24T09:27:14-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chad-g-adams.github.io/post/2016/05/21/first-post/</loc>
+    <loc>http://cadams.ca/post/2016/05/21/first-post/</loc>
     <lastmod>2016-05-21T11:36:01-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chad-g-adams.github.io/license/</loc>
+    <loc>http://cadams.ca/license/</loc>
   </url>
   
 </urlset>

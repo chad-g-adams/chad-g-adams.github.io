@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Chad Adams</title>
-    <link>http://chad-g-adams.github.io/categories/blog/</link>
+    <link>http://cadams.ca/categories/blog/</link>
     <description>Recent content in Blog on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Sat, 21 May 2016 11:36:01 -0400</lastBuildDate>
-    <atom:link href="http://chad-g-adams.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>First Post</title>
-      <link>http://chad-g-adams.github.io/post/2016/05/21/first-post/</link>
+      <link>http://cadams.ca/post/2016/05/21/first-post/</link>
       <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
       
-      <guid>http://chad-g-adams.github.io/post/2016/05/21/first-post/</guid>
+      <guid>http://cadams.ca/post/2016/05/21/first-post/</guid>
       <description>&lt;p&gt;Testing 1, 2, 3&amp;hellip;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Chad Adams</title>
-    <link>http://chad-g-adams.github.io/categories/code/</link>
+    <link>http://cadams.ca/categories/code/</link>
     <description>Recent content in Code on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Sat, 04 Jun 2016 10:53:47 -0400</lastBuildDate>
-    <atom:link href="http://chad-g-adams.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/categories/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Working with Hugo Templates</title>
-      <link>http://chad-g-adams.github.io/post/2016/06/04/working-with-hugo-templates/</link>
+      <link>http://cadams.ca/post/2016/06/04/working-with-hugo-templates/</link>
       <pubDate>Sat, 04 Jun 2016 10:53:47 -0400</pubDate>
       
-      <guid>http://chad-g-adams.github.io/post/2016/06/04/working-with-hugo-templates/</guid>
+      <guid>http://cadams.ca/post/2016/06/04/working-with-hugo-templates/</guid>
       <description>
 
 &lt;p&gt;Hugo uses templates to generate HTML pages. This lets you control your generated HTML content with the help of simple logic. For example, logic such as ranging over all blog posts so that you can print them one at a time onto the page. Hugo uses the &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;Go html/template&lt;/a&gt; library.&lt;/p&gt;
 
-&lt;p&gt;A template can describe an entire page, or just a small portion of a page (for example, just the copyright notice, the header, the footer, etc.). When this happens it is called a &lt;em&gt;partial template&lt;/em&gt;, and that template can be reused just about anywhere else in your website.  Partials are especially useful in Hugo themes, as it gives you the option to override just a small part of the layout to suit your needs. As mentioned in my &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/&#34;&gt;previous post&lt;/a&gt;, overriding any file in a theme is as simple as dropping in your own version of the file with the same name. Thus templates can be overriden the same way.&lt;/p&gt;
+&lt;p&gt;A template can describe an entire page, or just a small portion of a page (for example, just the copyright notice, the header, the footer, etc.). When this happens it is called a &lt;em&gt;partial template&lt;/em&gt;, and that template can be reused just about anywhere else in your website.  Partials are especially useful in Hugo themes, as it gives you the option to override just a small part of the layout to suit your needs. As mentioned in my &lt;a href=&#34;http://cadams.ca/post/2016/05/29/customizing-hugo-themes/&#34;&gt;previous post&lt;/a&gt;, overriding any file in a theme is as simple as dropping in your own version of the file with the same name. Thus templates can be overriden the same way.&lt;/p&gt;
 
 &lt;h1 id=&#34;modifying-the-hyde-x-theme:aca756b519d0e7970786722619fbfdb0&#34;&gt;Modifying the Hyde-X theme&lt;/h1&gt;
 
@@ -46,13 +46,13 @@
     
     <item>
       <title>Customizing Hugo Themes</title>
-      <link>http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/</link>
+      <link>http://cadams.ca/post/2016/05/29/customizing-hugo-themes/</link>
       <pubDate>Sun, 29 May 2016 15:46:05 -0400</pubDate>
       
-      <guid>http://chad-g-adams.github.io/post/2016/05/29/customizing-hugo-themes/</guid>
+      <guid>http://cadams.ca/post/2016/05/29/customizing-hugo-themes/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; has a straight forward yet powerful strategy for theming websites.&lt;/p&gt;
 
-&lt;p&gt;The first step is to &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;choose a theme&lt;/a&gt; to use, as your baseline. In an &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/&#34;&gt;earlier post&lt;/a&gt;, I mentioned that I picked &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; for this website. I liked the general design of Hyde but wanted the extra features provided by Hyde-X such as pagination.&lt;/p&gt;
+&lt;p&gt;The first step is to &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;choose a theme&lt;/a&gt; to use, as your baseline. In an &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;earlier post&lt;/a&gt;, I mentioned that I picked &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; for this website. I liked the general design of Hyde but wanted the extra features provided by Hyde-X such as pagination.&lt;/p&gt;
 
 &lt;p&gt;At this point your website will take on the default appearance of the theme. Most themes will also support some kind of configuration parameters out of the box, so this is usually the first step towards customization. For example, Hyde-X lets you configure your social media links, what syntax highlighting to use, and how you want your content paginated.&lt;/p&gt;
 
@@ -73,13 +73,13 @@
     
     <item>
       <title>Hosting a Hugo site on GitHub Pages</title>
-      <link>http://chad-g-adams.github.io/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
+      <link>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
       <pubDate>Thu, 26 May 2016 11:57:11 -0400</pubDate>
       
-      <guid>http://chad-g-adams.github.io/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
+      <guid>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
       <description>
 
-&lt;p&gt;In my &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
 
 &lt;h1 id=&#34;github-pages:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages&lt;/h1&gt;
 
@@ -89,7 +89,7 @@
 
 &lt;h1 id=&#34;github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages and Hugo&lt;/h1&gt;
 
-&lt;p&gt;As mentioned in my &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
+&lt;p&gt;As mentioned in my &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams.github.io&#34;&gt;chad-g-adams.github.io&lt;/a&gt;&lt;/li&gt;
@@ -146,10 +146,10 @@ git push origin master
     
     <item>
       <title>Getting Started With Hugo</title>
-      <link>http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/</link>
+      <link>http://cadams.ca/post/2016/05/24/getting-started-with-hugo/</link>
       <pubDate>Tue, 24 May 2016 09:27:14 -0400</pubDate>
       
-      <guid>http://chad-g-adams.github.io/post/2016/05/24/getting-started-with-hugo/</guid>
+      <guid>http://cadams.ca/post/2016/05/24/getting-started-with-hugo/</guid>
       <description>
 
 &lt;h1 id=&#34;overview:86024dcf7244259db6089302c01d25e4&#34;&gt;Overview&lt;/h1&gt;
@@ -222,7 +222,7 @@ git push origin master
 &lt;pre&gt;&lt;code&gt;hugo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Generates a folder &lt;code&gt;public/&lt;/code&gt; with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a web server, or hosted by an external service (such as GitHub Pages - I will be going into that in &lt;a href=&#34;http://chad-g-adams.github.io/post/2016/05/26/hosting-a-hugo-site-on-github-pages/&#34;&gt;my next post&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Generates a folder &lt;code&gt;public/&lt;/code&gt; with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a web server, or hosted by an external service (such as GitHub Pages - I will be going into that in &lt;a href=&#34;http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/&#34;&gt;my next post&lt;/a&gt;).&lt;/p&gt;
 
 &lt;h1 id=&#34;my-hugo-content:86024dcf7244259db6089302c01d25e4&#34;&gt;My Hugo Content&lt;/h1&gt;
 
