@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Integration Testing with Node and Mongo &middot; Chad Adams</title>
+
+  
+  <link rel="stylesheet" href="http://cadams.ca/css/poole.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/hyde.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/hyde-x.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/highlight/default.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/chad.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cadams.ca/touch-icon-144-precomposed.png">
+  <link href="http://cadams.ca/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Chad Adams">
+  <meta name="keywords" content="integration testing,Node,Mongo,Mongoose,Mocha">
+  
+</head>
+<body class="theme-chad">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Chad Adams</h1>
+      <p class="lead">Code etc</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://cadams.ca/"></a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-book'></i><a href="http://cadams.ca/"> My Blog</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-keyboard-o'></i><a href="http://cadams.ca/categories/code/"> Coding Adventures</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/chad-g-adams"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/chizzadwick"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://cadams.ca/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://cadams.ca/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Integration Testing with Node and Mongo</h1>
+    <span class="post-date">Oct 14, 2016 &middot; 3 minute read &middot; <a href="http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/#disqus_thread">Comments</a>
+	 
+ 
+	
+		   
+	
+ 
+
+
+	<br/>
+	
+	 
+		<a class="label" href="http://cadams.ca/tags/testing">testing</a><a class="label" href="http://cadams.ca/tags/mongo">Mongo</a><a class="label" href="http://cadams.ca/tags/node">Node</a><a class="label" href="http://cadams.ca/tags/mongoose">Mongoose</a> 
+	
+
+
+ </span>
+    
+
+<p>I&rsquo;ve been building <a href="https://github.com/cised-ca/social-enterprise-directory">an application</a> using Node.js with a MongoDB datastore. Now I want to perform some integration testing (<em>without</em> mocking the DB layer) to ensure full end-to-end success of the application. Here&rsquo;s how I went about doing this.</p>
+
+<h1 id="using-a-test-database:6648ac7d9852b157cbf2d7b2e6ff1536">Using a test database</h1>
+
+<p>While the goal is to execute code paths that go through Mongo, it will still be acceptable to execute against a different db than the one used for production deployments. This will ensure the test data never ends up in production by accident, and also avoids production data getting deleted by accident.</p>
+
+<p>Hence, I&rsquo;ll have the application connect to Mongo using a test connection string. This will be specified in a configuration file with suitable default value.</p>
+
+<p>Since the application creates the db collections on start up, there are no further pre-requisite Mongo commands to setup the test database.</p>
+
+<h1 id="starting-the-application:6648ac7d9852b157cbf2d7b2e6ff1536">Starting the application</h1>
+
+<p>Before any tests can run, the application needs to start up. So I wrote a simple <code>app_starter.js</code> utility to boot the application into service with the appropriate test configuration.</p>
+
+<h1 id="starting-each-test-with-a-clean-datastore:6648ac7d9852b157cbf2d7b2e6ff1536">Starting each test with a clean datastore</h1>
+
+<p>Each test needs to be independent, so we can&rsquo;t leave remnants in the datastore from a previous test. Hence the first thing I do at the start of each test is clean the database.</p>
+
+<p>I&rsquo;m using Mocha as my test framework, so this gets implemented as a <code>beforeEach</code> hook:</p>
+
+<pre><code>beforeEach( function(done) {
+    dbUtil.cleanDatabase(done);
+});
+</code></pre>
+
+<h1 id="cleaning-the-datastore:6648ac7d9852b157cbf2d7b2e6ff1536">Cleaning the datastore</h1>
+
+<p>One very straightforward way to clean the datastore, is to drop the database and re-create it again. My application connects to the datastore using <a href="mongoosejs.com">Mongoose</a>. With Mongoose, the database can be dropped with the following command:</p>
+
+<pre><code>function cleanDatabase(done) {
+  mongoose.connection.db.dropDatabase(done);
+}
+</code></pre>
+
+<p>That was easy.</p>
+
+<p>Now how do we re-create the database? Turns out Mongoose is kind enough to do this for you automatically under the hood, so nothing else to do. However there&rsquo;s one more wrinkle to deal with&hellip;</p>
+
+<p>Mongoose will re-create the collections in the database on demand, but not the indexes. The indexes are only built during mongoose connection establishment. This means our tests won&rsquo;t be able to execute successfully because the database indexes won&rsquo;t be present. Let&rsquo;s look at how to address that.</p>
+
+<h1 id="rebuilding-the-indexes:6648ac7d9852b157cbf2d7b2e6ff1536">Rebuilding the indexes</h1>
+
+<p>Luckily Mongoose supplies an API to rebuild the indexes:</p>
+
+<pre><code>mongoose.model(modelName).ensureIndexes();
+</code></pre>
+
+<p>This takes a little time to complete, so I had to register on <code>index</code> event to listen for when it finishes.</p>
+
+<pre><code>mongoose.model(myModel).on('index', done);
+</code></pre>
+
+<p>Once the indexes are ready, the database is set for your test to begin. Here is the updated <code>cleanDatabase</code> function which delegates to a rebuildIndexes helper function:</p>
+
+<pre><code>function cleanDatabase(done) {
+  mongoose.connection.db.dropDatabase( function() {
+    rebuildIndexes(done);
+  });
+}
+</code></pre>
+
+<p>You may find the full implementation <a href="https://github.com/cised-ca/social-enterprise-directory/blob/dd0c588843ffe014b0befd36e316beefa6bc181b/test/api/helpers/db/db_util.js">here</a></p>
+
+<h1 id="results:6648ac7d9852b157cbf2d7b2e6ff1536">Results</h1>
+
+<p>That puts a simple automated integration test framework in place for application developers to work with. This should help ensure stability of the application over time as new features get added, while also allowing developers to take a TDD approach to feature development.</p>
+
+<p>On my system it does take a few 100 ms to run each test due to the extra database overhead. Given the number of tests at the moment, this is not a concern. In the future if it somehow grows into a problem there are alternatives to dropping the database, such as removing the collections, which I&rsquo;ve heard may improve execution performance. This would be easy to refactor in the future if needed, but I expect the current implementation will be just fine for a long while.</p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "chad-g-adams";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "chad-g-adams";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://cadams.ca/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

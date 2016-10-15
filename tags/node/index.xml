@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node on Chad Adams</title>
+    <link>http://cadams.ca/tags/node/</link>
+    <description>Recent content in Node on Chad Adams</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Chad Adams</copyright>
+    <lastBuildDate>Fri, 14 Oct 2016 22:31:54 -0400</lastBuildDate>
+    <atom:link href="http://cadams.ca/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Integration Testing with Node and Mongo</title>
+      <link>http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/</link>
+      <pubDate>Fri, 14 Oct 2016 22:31:54 -0400</pubDate>
+      
+      <guid>http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/</guid>
+      <description>
+
+&lt;p&gt;I&amp;rsquo;ve been building &lt;a href=&#34;https://github.com/cised-ca/social-enterprise-directory&#34;&gt;an application&lt;/a&gt; using Node.js with a MongoDB datastore. Now I want to perform some integration testing (&lt;em&gt;without&lt;/em&gt; mocking the DB layer) to ensure full end-to-end success of the application. Here&amp;rsquo;s how I went about doing this.&lt;/p&gt;
+
+&lt;h1 id=&#34;using-a-test-database:6648ac7d9852b157cbf2d7b2e6ff1536&#34;&gt;Using a test database&lt;/h1&gt;
+
+&lt;p&gt;While the goal is to execute code paths that go through Mongo, it will still be acceptable to execute against a different db than the one used for production deployments. This will ensure the test data never ends up in production by accident, and also avoids production data getting deleted by accident.&lt;/p&gt;
+
+&lt;p&gt;Hence, I&amp;rsquo;ll have the application connect to Mongo using a test connection string. This will be specified in a configuration file with suitable default value.&lt;/p&gt;
+
+&lt;p&gt;Since the application creates the db collections on start up, there are no further pre-requisite Mongo commands to setup the test database.&lt;/p&gt;
+
+&lt;h1 id=&#34;starting-the-application:6648ac7d9852b157cbf2d7b2e6ff1536&#34;&gt;Starting the application&lt;/h1&gt;
+
+&lt;p&gt;Before any tests can run, the application needs to start up. So I wrote a simple &lt;code&gt;app_starter.js&lt;/code&gt; utility to boot the application into service with the appropriate test configuration.&lt;/p&gt;
+
+&lt;h1 id=&#34;starting-each-test-with-a-clean-datastore:6648ac7d9852b157cbf2d7b2e6ff1536&#34;&gt;Starting each test with a clean datastore&lt;/h1&gt;
+
+&lt;p&gt;Each test needs to be independent, so we can&amp;rsquo;t leave remnants in the datastore from a previous test. Hence the first thing I do at the start of each test is clean the database.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m using Mocha as my test framework, so this gets implemented as a &lt;code&gt;beforeEach&lt;/code&gt; hook:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;beforeEach( function(done) {
+    dbUtil.cleanDatabase(done);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;cleaning-the-datastore:6648ac7d9852b157cbf2d7b2e6ff1536&#34;&gt;Cleaning the datastore&lt;/h1&gt;
+
+&lt;p&gt;One very straightforward way to clean the datastore, is to drop the database and re-create it again. My application connects to the datastore using &lt;a href=&#34;mongoosejs.com&#34;&gt;Mongoose&lt;/a&gt;. With Mongoose, the database can be dropped with the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function cleanDatabase(done) {
+  mongoose.connection.db.dropDatabase(done);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That was easy.&lt;/p&gt;
+
+&lt;p&gt;Now how do we re-create the database? Turns out Mongoose is kind enough to do this for you automatically under the hood, so nothing else to do. However there&amp;rsquo;s one more wrinkle to deal with&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Mongoose will re-create the collections in the database on demand, but not the indexes. The indexes are only built during mongoose connection establishment. This means our tests won&amp;rsquo;t be able to execute successfully because the database indexes won&amp;rsquo;t be present. Let&amp;rsquo;s look at how to address that.&lt;/p&gt;
+
+&lt;h1 id=&#34;rebuilding-the-indexes:6648ac7d9852b157cbf2d7b2e6ff1536&#34;&gt;Rebuilding the indexes&lt;/h1&gt;
+
+&lt;p&gt;Luckily Mongoose supplies an API to rebuild the indexes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mongoose.model(modelName).ensureIndexes();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This takes a little time to complete, so I had to register on &lt;code&gt;index&lt;/code&gt; event to listen for when it finishes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mongoose.model(myModel).on(&#39;index&#39;, done);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once the indexes are ready, the database is set for your test to begin. Here is the updated &lt;code&gt;cleanDatabase&lt;/code&gt; function which delegates to a rebuildIndexes helper function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function cleanDatabase(done) {
+  mongoose.connection.db.dropDatabase( function() {
+    rebuildIndexes(done);
+  });
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You may find the full implementation &lt;a href=&#34;https://github.com/cised-ca/social-enterprise-directory/blob/dd0c588843ffe014b0befd36e316beefa6bc181b/test/api/helpers/db/db_util.js&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;results:6648ac7d9852b157cbf2d7b2e6ff1536&#34;&gt;Results&lt;/h1&gt;
+
+&lt;p&gt;That puts a simple automated integration test framework in place for application developers to work with. This should help ensure stability of the application over time as new features get added, while also allowing developers to take a TDD approach to feature development.&lt;/p&gt;
+
+&lt;p&gt;On my system it does take a few 100 ms to run each test due to the extra database overhead. Given the number of tests at the moment, this is not a concern. In the future if it somehow grows into a problem there are alternatives to dropping the database, such as removing the collections, which I&amp;rsquo;ve heard may improve execution performance. This would be easy to refactor in the future if needed, but I expect the current implementation will be just fine for a long while.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
