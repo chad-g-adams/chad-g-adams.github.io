@@ -7,8 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Sat, 04 Feb 2017 21:10:13 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 03 Mar 2017 16:02:53 -0500</lastBuildDate>
     <atom:link href="http://cadams.ca/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Architectus Oryzus</title>
+      <link>http://cadams.ca/post/2017/03/03/architectus-oryzus/</link>
+      <pubDate>Fri, 03 Mar 2017 16:02:53 -0500</pubDate>
+      
+      <guid>http://cadams.ca/post/2017/03/03/architectus-oryzus/</guid>
+      <description>&lt;p&gt;Martin Fowler wrote &lt;a href=&#34;http://www.in-gmbh.eu/uploads/media/whoNeedsArchitect.pdf&#34;&gt;an article&lt;/a&gt; on software architecture almost 15 years ago. I just discovered it now while in the midst of changing jobs, and I found this part where he contrasts architect styles very relevant for me in this moment:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Architectus Reloadus&lt;/em&gt; is the person who makes all the important decisions. The architect does this because a single mind is needed to ensure a system’s conceptual integrity,  and perhaps because the architect doesn’t think that the team members are sufficiently skilled to make those decisions. Often, such decisions must be made early on so that everyone else has a plan to follow.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Architectus Oryzus&lt;/em&gt; is a different kind of animal. This kind of architect must be very aware of what’s going on in the project, looking out for important issues and tackling them before they become a serious problem. When I see an architect like this, the most noticeable part of the work is the intense collaboration. In the morning, the architect programs with a developer, trying to harvest some common locking code. In the afternoon, the architect participates in a requirements session, helping explain to the requirements people the technical consequences of some of their ideas in non-technical terms — such as development costs.&lt;/p&gt;
+
+&lt;p&gt;In many ways, the most important activity of &lt;em&gt;Architectus Oryzus&lt;/em&gt; is to mentor the development team, to raise their level so that they can take on more complex issues. Improving the development team’s ability gives an architect much greater leverage than being the sole decision maker and thus running the risk of being an architectural bottleneck. This leads to the satisfying rule of thumb that an architect’s value is inversely proportional to the number of decisions he or she makes.&lt;/p&gt;
+
+&lt;p&gt;-Martin Fowler in &lt;a href=&#34;http://www.in-gmbh.eu/uploads/media/whoNeedsArchitect.pdf&#34;&gt;Who Needs An Architect?&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think that summarizes very well the role I played for my previous company. Without the benefit of the article&amp;rsquo;s description, I intuitively approached architecture in this way. It&amp;rsquo;s always been clear to me that collaboration is the key to a better product. That means always looking for feedback on designs (earlier the better), and being open to better ideas (often bubbling from the bottom up, sometimes from unexpected places). Raising the level of the development team is crucial, to both increase the pool of critical thinkers available for each problem (huge win), while also reducing the incidence of &amp;ldquo;misguided&amp;rdquo; code submissions (which can become dangerous precedents for future development if left unchecked). There is so much opportunity to learn in both directions.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, looking back on my experience now, if I can be critical in one area, it&amp;rsquo;s that I probably got a bit too involved with the teams at times, leading to over-reliance. I&amp;rsquo;m thinking in particular of the moments when I was overseeing three scrum teams. Teams came to rely on me to do reviews, especially code reviews. Even after raising their level and mentoring them to the point that they were capable of self-organizing and taking on that role themselves, I did not truly notice anyone rise up to champion the cause*. Partly I think, that&amp;rsquo;s because I was performing that role so consistently. Too consistently perhaps. Hence there may be a lesson here about stepping back when the time is right.&lt;/p&gt;
+
+&lt;p&gt;*(At least, the team structures never lasted long enough to see if any champions would finally emerge. I do hope they have gone on to be leaders on their future teams).&lt;/p&gt;
+
+&lt;p&gt;In the end, it was a very rewarding experience with my previous company, and I&amp;rsquo;m looking forward to the new challenges ahead.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Book Review: Project Animal Farm</title>
@@ -852,25 +880,6 @@ git push origin master
 &lt;h1 id=&#34;my-hugo-content:86024dcf7244259db6089302c01d25e4&#34;&gt;My Hugo Content&lt;/h1&gt;
 
 &lt;p&gt;For reference, the Hugo code for this website can be found on my github repo &lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams-hugo&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>http://cadams.ca/post/2016/05/21/first-post/</link>
-      <pubDate>Sat, 21 May 2016 11:36:01 -0400</pubDate>
-      
-      <guid>http://cadams.ca/post/2016/05/21/first-post/</guid>
-      <description>&lt;p&gt;Testing 1, 2, 3&amp;hellip;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Lorem dim sum BBQ pork puff Pan friend pork dumpling Pot sticker water chestnut cake bitter melon beef dumplings turnip cake leek dumplings deep fried taro turnover Cha siu sou Cheong fan
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Generated by &lt;a href=&#34;http://loremdimsum.com/&#34;&gt;Lorem Dim Sum&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Welcome to my &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; blog. Hungry yet? :)&lt;/p&gt;
 </description>
     </item>
     
