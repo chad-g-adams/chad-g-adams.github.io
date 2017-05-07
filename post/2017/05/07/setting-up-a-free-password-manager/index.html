@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Setting up a (free) Password Manager &middot; Chad Adams</title>
+
+  
+  <link rel="stylesheet" href="http://cadams.ca/css/poole.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/hyde.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/hyde-x.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/highlight/default.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://cadams.ca/css/chad.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cadams.ca/touch-icon-144-precomposed.png">
+  <link href="http://cadams.ca/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Chad Adams">
+  <meta name="keywords" content="password manager,keepass">
+  
+</head>
+<body class="theme-chad">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Chad Adams</h1>
+      <p class="lead">Code etc</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://cadams.ca/"></a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-rss'></i><a href="http://cadams.ca/"> My Blog</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-keyboard-o'></i><a href="http://cadams.ca/categories/code/"> Coding Adventures</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-book'></i><a href="http://cadams.ca/categories/book/"> Book Talk</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/chad-g-adams"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/chizzadwick"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://cadams.ca/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2017 <a href="http://cadams.ca/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Setting up a (free) Password Manager</h1>
+    <span class="post-date">May 7, 2017 &middot; 2 minute read &middot; <a href="http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/#disqus_thread">Comments</a>
+	 
+ 
+	
+		   
+	
+ 
+
+
+	<br/>
+	
+	 
+		<a class="label" href="http://cadams.ca/tags/password-manager">password manager</a><a class="label" href="http://cadams.ca/tags/keepass">keepass</a> 
+	
+
+
+ </span>
+    <p>After years of remaining skeptical about password managers (do I really want to put all my eggs in one basket?), I finally caved after realizing that (a) there were simply too many accounts to remember and (b) my email is effectively a basket holding all the eggs already (anyone who gains access to your email account can use the password reset feature to access your other accounts). With that in mind a password manager didn&rsquo;t seem to increase my risk profile any further from it&rsquo;s current state.</p>
+
+<p>Companies like the popular <em>1Password</em> offer cloud-based password management across all your devices.. at a cost. $3/month for their basic plan. I was looking for something cheaper than that. Free, ideally.</p>
+
+<p>So I found <a href="http://keepass.info/index.html"><em>KeePass</em></a>, a lightweight open source password manager. The Windows client is so lightweight you don&rsquo;t even have to install it. It&rsquo;s just an <code>exe</code> file that sits in a folder. After opening KeePass, you add new entries for each of your passwords, or you can import passwords from other password managers (although I was starting from scratch so I didn&rsquo;t explore this further). The resulting password database is just an encrypted file that is safe to move around.</p>
+
+<p>If you want to make your passwords available to other devices, you&rsquo;ll need to share this file with those devices. For my purposes, my phone is the only other device I deal with. I installed the Android app <em>KeePassDroid</em>, copied over the password database by USB, and now I&rsquo;m set.</p>
+
+<p>The drawback with this approach is it doesn&rsquo;t have cloud sync. I could have hosted my password database in my own cloud if I really wanted to, but actually I&rsquo;ve found a simpler way to sync. These days, I always have my phone nearby! Hence the password database on my phone becomes my primary database, and all edits are done in my phone (it&rsquo;s pretty rare that I have to add or change a password anyway). Then periodically about once a month or so, when I normally backup my phone I also transfer my password database over at the same time.</p>
+
+<p>This is a very simple approach to password management, but it meets my needs. I guess you can look at it as a cheap alternative to the pay services out there.</p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "chad-g-adams";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "chad-g-adams";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://cadams.ca/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

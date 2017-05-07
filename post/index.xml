@@ -7,8 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Fri, 03 Mar 2017 16:02:53 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 07 May 2017 15:39:27 -0400</lastBuildDate>
     <atom:link href="http://cadams.ca/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setting up a (free) Password Manager</title>
+      <link>http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/</link>
+      <pubDate>Sun, 07 May 2017 15:39:27 -0400</pubDate>
+      
+      <guid>http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/</guid>
+      <description>&lt;p&gt;After years of remaining skeptical about password managers (do I really want to put all my eggs in one basket?), I finally caved after realizing that (a) there were simply too many accounts to remember and (b) my email is effectively a basket holding all the eggs already (anyone who gains access to your email account can use the password reset feature to access your other accounts). With that in mind a password manager didn&amp;rsquo;t seem to increase my risk profile any further from it&amp;rsquo;s current state.&lt;/p&gt;
+
+&lt;p&gt;Companies like the popular &lt;em&gt;1Password&lt;/em&gt; offer cloud-based password management across all your devices.. at a cost. $3/month for their basic plan. I was looking for something cheaper than that. Free, ideally.&lt;/p&gt;
+
+&lt;p&gt;So I found &lt;a href=&#34;http://keepass.info/index.html&#34;&gt;&lt;em&gt;KeePass&lt;/em&gt;&lt;/a&gt;, a lightweight open source password manager. The Windows client is so lightweight you don&amp;rsquo;t even have to install it. It&amp;rsquo;s just an &lt;code&gt;exe&lt;/code&gt; file that sits in a folder. After opening KeePass, you add new entries for each of your passwords, or you can import passwords from other password managers (although I was starting from scratch so I didn&amp;rsquo;t explore this further). The resulting password database is just an encrypted file that is safe to move around.&lt;/p&gt;
+
+&lt;p&gt;If you want to make your passwords available to other devices, you&amp;rsquo;ll need to share this file with those devices. For my purposes, my phone is the only other device I deal with. I installed the Android app &lt;em&gt;KeePassDroid&lt;/em&gt;, copied over the password database by USB, and now I&amp;rsquo;m set.&lt;/p&gt;
+
+&lt;p&gt;The drawback with this approach is it doesn&amp;rsquo;t have cloud sync. I could have hosted my password database in my own cloud if I really wanted to, but actually I&amp;rsquo;ve found a simpler way to sync. These days, I always have my phone nearby! Hence the password database on my phone becomes my primary database, and all edits are done in my phone (it&amp;rsquo;s pretty rare that I have to add or change a password anyway). Then periodically about once a month or so, when I normally backup my phone I also transfer my password database over at the same time.&lt;/p&gt;
+
+&lt;p&gt;This is a very simple approach to password management, but it meets my needs. I guess you can look at it as a cheap alternative to the pay services out there.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Architectus Oryzus</title>
@@ -794,92 +814,6 @@ git add -A
 git commit -m &amp;quot;website update&amp;quot;
 git push origin master
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Getting Started With Hugo</title>
-      <link>http://cadams.ca/post/2016/05/24/getting-started-with-hugo/</link>
-      <pubDate>Tue, 24 May 2016 09:27:14 -0400</pubDate>
-      
-      <guid>http://cadams.ca/post/2016/05/24/getting-started-with-hugo/</guid>
-      <description>
-
-&lt;h1 id=&#34;overview:86024dcf7244259db6089302c01d25e4&#34;&gt;Overview&lt;/h1&gt;
-
-&lt;p&gt;Setting up a website these days can be done at no cost other than a bit of time. I thought it would be interesting to spend a weekend playing around with some of the available tools. This article covers how I set up my site, using &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; to generate my content, and &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; to host.&lt;/p&gt;
-
-&lt;h1 id=&#34;hugo:86024dcf7244259db6089302c01d25e4&#34;&gt;Hugo&lt;/h1&gt;
-
-&lt;p&gt;For simple sites, such as blogs, there are good reasons to prefer static site generators:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Better security&lt;/strong&gt;: everything becomes simple static content so it significantly limits the areas of exposure to hackers; there are no logins, passwords, etc.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Performance&lt;/strong&gt;: the site will load quickly and be responsive&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Offline editing&lt;/strong&gt;: I can continue to create content when I&amp;rsquo;m offline, although that is becoming less and less of an issue these days&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; is a static site generator written in Go. I chose Hugo because it was open source with an active community, and because I also have an interest in learning the Go language (not that you need worry about that when building your website with Hugo).&lt;/p&gt;
-
-&lt;h1 id=&#34;hugo-workflow:86024dcf7244259db6089302c01d25e4&#34;&gt;Hugo Workflow&lt;/h1&gt;
-
-&lt;p&gt;Using Hugo was an absolute pleasure. There are &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;good tutorials&lt;/a&gt; on Hugo available, so I will just cover some of the highlights here to demonstrate how easy it is.&lt;/p&gt;
-
-&lt;h2 id=&#34;creating-a-new-site:86024dcf7244259db6089302c01d25e4&#34;&gt;Creating a new site&lt;/h2&gt;
-
-&lt;p&gt;One simple command will create you a new site&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo new site mySiteName
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will create a new folder called &lt;code&gt;mySiteName/&lt;/code&gt; and bootstrap it with the required directory structure.&lt;/p&gt;
-
-&lt;h2 id=&#34;create-new-content:86024dcf7244259db6089302c01d25e4&#34;&gt;Create new content&lt;/h2&gt;
-
-&lt;p&gt;Creating a new post is as simple as&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo new post/my-post-name.md
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The post file &lt;code&gt;my-post-name.md&lt;/code&gt; appears in the &lt;code&gt;mySiteName/content/post/&lt;/code&gt; directory.&lt;/p&gt;
-
-&lt;p&gt;The basic premise of Hugo is that your content is organized in a specific way on purpose. Hence the filesystem organization of your content matches the URL at which it is hosted. For example content file at &lt;code&gt;content/foo/bar/myFirstPost.md&lt;/code&gt; will be hosted at &lt;code&gt;&amp;lt;site&amp;gt;/foo/bar/myFirstPost&lt;/code&gt; (By default - however that is fully configurable).&lt;/p&gt;
-
-&lt;h2 id=&#34;editing-content:86024dcf7244259db6089302c01d25e4&#34;&gt;Editing content&lt;/h2&gt;
-
-&lt;p&gt;Post content is generally a plain text file (which means I am writing everything in vim, hooray!). Hugo has native support for &lt;a href=&#34;http://daringfireball.net/projects/markdown/basics&#34;&gt;Markdown&lt;/a&gt; language.&lt;/p&gt;
-
-&lt;p&gt;Every content file begins with a section of metadata that allows you to specify information about the content, like the title, date, tags, or any arbitrary data you would use to classify your content.&lt;/p&gt;
-
-&lt;h2 id=&#34;pick-a-theme:86024dcf7244259db6089302c01d25e4&#34;&gt;Pick a Theme&lt;/h2&gt;
-
-&lt;p&gt;Next you pick a theme for your site. I used &lt;strong&gt;&lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;hyde-x&lt;/a&gt;&lt;/strong&gt;, with a few tweaks (more to come on that in a later post).&lt;/p&gt;
-
-&lt;h2 id=&#34;preview-your-site:86024dcf7244259db6089302c01d25e4&#34;&gt;Preview Your Site&lt;/h2&gt;
-
-&lt;p&gt;Alright, we have some content now, let&amp;rsquo;s test it out. Hugo comes with a built-in HTTP server. Launch the server with a simple command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo serve
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And connect a browser to the endpoint to view your site. Boom!&lt;/p&gt;
-
-&lt;p&gt;Could it be any easier?&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a cool feature: your browser &lt;em&gt;automatically updates instantly&lt;/em&gt; as you edit your site&amp;rsquo;s content! This makes your web development cycle a very tight loop.&lt;/p&gt;
-
-&lt;h2 id=&#34;publish-your-site:86024dcf7244259db6089302c01d25e4&#34;&gt;Publish Your Site&lt;/h2&gt;
-
-&lt;p&gt;Once you&amp;rsquo;re satisfied with your site, it&amp;rsquo;s time to publish. Running the command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Generates a folder &lt;code&gt;public/&lt;/code&gt; with all the static HTML, CSS, etc needed for your site.  That folder can then be dropped onto a web server, or hosted by an external service (such as GitHub Pages - I will be going into that in &lt;a href=&#34;http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/&#34;&gt;my next post&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h1 id=&#34;my-hugo-content:86024dcf7244259db6089302c01d25e4&#34;&gt;My Hugo Content&lt;/h1&gt;
-
-&lt;p&gt;For reference, the Hugo code for this website can be found on my github repo &lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams-hugo&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
