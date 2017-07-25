@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chad Adams</title>
-    <link>http://cadams.ca/post/</link>
+    <link>http://cadams.ca/blog/post/</link>
     <description>Recent content in Posts on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Sun, 07 May 2017 15:39:27 -0400</lastBuildDate>
-    <atom:link href="http://cadams.ca/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setting up a (free) Password Manager</title>
-      <link>http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/</link>
+      <link>http://cadams.ca/blog/post/2017/05/07/setting-up-a-free-password-manager/</link>
       <pubDate>Sun, 07 May 2017 15:39:27 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/</guid>
+      <guid>http://cadams.ca/blog/post/2017/05/07/setting-up-a-free-password-manager/</guid>
       <description>&lt;p&gt;After years of remaining skeptical about password managers (do I really want to put all my eggs in one basket?), I finally caved after realizing that (a) there were simply too many accounts to remember and (b) my email is effectively a basket holding all the eggs already (anyone who gains access to your email account can use the password reset feature to access your other accounts). With that in mind a password manager didn&amp;rsquo;t seem to increase my risk profile any further from it&amp;rsquo;s current state.&lt;/p&gt;
 
 &lt;p&gt;Companies like the popular &lt;em&gt;1Password&lt;/em&gt; offer cloud-based password management across all your devices.. at a cost. $3/month for their basic plan. I was looking for something cheaper than that. Free, ideally.&lt;/p&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>Architectus Oryzus</title>
-      <link>http://cadams.ca/post/2017/03/03/architectus-oryzus/</link>
+      <link>http://cadams.ca/blog/post/2017/03/03/architectus-oryzus/</link>
       <pubDate>Fri, 03 Mar 2017 16:02:53 -0500</pubDate>
       
-      <guid>http://cadams.ca/post/2017/03/03/architectus-oryzus/</guid>
+      <guid>http://cadams.ca/blog/post/2017/03/03/architectus-oryzus/</guid>
       <description>&lt;p&gt;Martin Fowler wrote &lt;a href=&#34;http://www.in-gmbh.eu/uploads/media/whoNeedsArchitect.pdf&#34;&gt;an article&lt;/a&gt; on software architecture almost 15 years ago. I just discovered it now while in the midst of changing jobs, and I found this part where he contrasts architect styles to be very relevant for me in this moment:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>Book Review: Project Animal Farm</title>
-      <link>http://cadams.ca/post/2017/02/04/book-review-project-animal-farm/</link>
+      <link>http://cadams.ca/blog/post/2017/02/04/book-review-project-animal-farm/</link>
       <pubDate>Sat, 04 Feb 2017 21:10:13 -0500</pubDate>
       
-      <guid>http://cadams.ca/post/2017/02/04/book-review-project-animal-farm/</guid>
+      <guid>http://cadams.ca/blog/post/2017/02/04/book-review-project-animal-farm/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://www.soniafaruqi.com/wp-content/themes/sonia/images/book-home.png&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
@@ -127,10 +127,10 @@
     
     <item>
       <title>America is stumbling, what can Canada do?</title>
-      <link>http://cadams.ca/post/2017/01/30/america-is-stumbling-what-can-canada-do/</link>
+      <link>http://cadams.ca/blog/post/2017/01/30/america-is-stumbling-what-can-canada-do/</link>
       <pubDate>Mon, 30 Jan 2017 22:35:05 -0500</pubDate>
       
-      <guid>http://cadams.ca/post/2017/01/30/america-is-stumbling-what-can-canada-do/</guid>
+      <guid>http://cadams.ca/blog/post/2017/01/30/america-is-stumbling-what-can-canada-do/</guid>
       <description>
 
 &lt;p&gt;Last week, the US passed a law to ban refugees and Muslims. From a world that views America as a role model in freedom and opportunity, this is a shocking reversal on some core values. America is one of the strongest democracies in the world. If this can happen to America, then no country is safe.&lt;/p&gt;
@@ -176,10 +176,10 @@
     
     <item>
       <title>WeAllProfit.ca Launched!</title>
-      <link>http://cadams.ca/post/2016/12/13/weallprofit.ca-launched/</link>
+      <link>http://cadams.ca/blog/post/2016/12/13/weallprofit.ca-launched/</link>
       <pubDate>Tue, 13 Dec 2016 07:03:15 -0500</pubDate>
       
-      <guid>http://cadams.ca/post/2016/12/13/weallprofit.ca-launched/</guid>
+      <guid>http://cadams.ca/blog/post/2016/12/13/weallprofit.ca-launched/</guid>
       <description>&lt;p&gt;A website I have been helping to build for &lt;a href=&#34;http://csedottawa.ca/&#34;&gt;CSED&lt;/a&gt; has officially launched!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://WeAllProfit.ca&#34;&gt;WeAllProfit.ca&lt;/a&gt; is a directory of social enterprises in Ottawa. A &lt;em&gt;social enterprise&lt;/em&gt; is a venture which has a  mission that goes beyond profit. This can mean offering employment to vulnerable or disabled people, protecting the environment, or passing their profits on to a charitable organization. Check out the &lt;a href=&#34;https://WeAllProfit.ca&#34;&gt;website&lt;/a&gt; for many examples of social enterprises in Ottawa.&lt;/p&gt;
@@ -190,13 +190,13 @@
     
     <item>
       <title>Book Review: Into the Silence</title>
-      <link>http://cadams.ca/post/2016/11/13/book-review-into-the-silence/</link>
+      <link>http://cadams.ca/blog/post/2016/11/13/book-review-into-the-silence/</link>
       <pubDate>Sun, 13 Nov 2016 16:20:11 -0500</pubDate>
       
-      <guid>http://cadams.ca/post/2016/11/13/book-review-into-the-silence/</guid>
+      <guid>http://cadams.ca/blog/post/2016/11/13/book-review-into-the-silence/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://cadams.ca/images/into-the-silence.png&#34; alt=&#34;Into the Silence&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://cadams.ca/blog/images/into-the-silence.png&#34; alt=&#34;Into the Silence&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;the-great-war-mallory-and-the-conquest-of-everest:430078025ad00d05681f6e91e31d9b31&#34;&gt;The Great War, Mallory, and the Conquest of Everest&lt;/h1&gt;
 
@@ -238,10 +238,10 @@
     
     <item>
       <title>Integration Testing with Node and Mongo</title>
-      <link>http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/</link>
+      <link>http://cadams.ca/blog/post/2016/10/14/integration-testing-with-node-and-mongo/</link>
       <pubDate>Fri, 14 Oct 2016 22:31:54 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/</guid>
+      <guid>http://cadams.ca/blog/post/2016/10/14/integration-testing-with-node-and-mongo/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;ve been building &lt;a href=&#34;https://github.com/cised-ca/social-enterprise-directory&#34;&gt;an application&lt;/a&gt; using Node.js with a MongoDB datastore. Now I want to perform some integration testing (&lt;em&gt;without&lt;/em&gt; mocking the DB layer) to ensure full end-to-end success of the application. Here&amp;rsquo;s how I went about doing this.&lt;/p&gt;
@@ -317,10 +317,10 @@
     
     <item>
       <title>Presentation Skills Training</title>
-      <link>http://cadams.ca/post/2016/09/20/presentation-skills-training/</link>
+      <link>http://cadams.ca/blog/post/2016/09/20/presentation-skills-training/</link>
       <pubDate>Tue, 20 Sep 2016 22:31:23 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/09/20/presentation-skills-training/</guid>
+      <guid>http://cadams.ca/blog/post/2016/09/20/presentation-skills-training/</guid>
       <description>
 
 &lt;p&gt;I recently completed a two-day training course on presentation skills. While I have been known to give a killer presentation (or speech) in my time, doing so takes &lt;em&gt;a lot&lt;/em&gt; of preparation on my end and it&amp;rsquo;s never as natural as I would like. By taking this course, my goal was to hone my skills, practice a little more, and discover some new tips and tricks. Here are the main takeaways for me&amp;hellip;&lt;/p&gt;
@@ -478,10 +478,10 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Book Review: Mindset</title>
-      <link>http://cadams.ca/post/2016/08/09/book-review-mindset/</link>
+      <link>http://cadams.ca/blog/post/2016/08/09/book-review-mindset/</link>
       <pubDate>Tue, 09 Aug 2016 23:11:01 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/08/09/book-review-mindset/</guid>
+      <guid>http://cadams.ca/blog/post/2016/08/09/book-review-mindset/</guid>
       <description>&lt;p&gt;Carol Dweck&amp;rsquo;s &lt;a href=&#34;https://www.amazon.com/Mindset-Psychology-Success-Carol-Dweck/dp/0345472322&#34;&gt;&lt;em&gt;Mindset: The New Psychology of Success&lt;/em&gt;&lt;/a&gt; summarizes the ground-breaking research she and others have been leading on the subjects of motivation, identity, self-awareness and ability. All of these, it turns out, can be influenced significantly by one&amp;rsquo;s mindset.&lt;/p&gt;
 
 &lt;p&gt;Her most famous experiment involves taking two groups of kids and giving each kid an easy puzzle to solve. She then praised one group of kids for being smart, but praised the other group for their effort. Then she observed how the performance of these two groups differed over time, and they did dramatically!&lt;/p&gt;
@@ -527,10 +527,10 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Book Review: Quantum Night</title>
-      <link>http://cadams.ca/post/2016/07/06/book-review-quantum-night/</link>
+      <link>http://cadams.ca/blog/post/2016/07/06/book-review-quantum-night/</link>
       <pubDate>Wed, 06 Jul 2016 17:02:37 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/07/06/book-review-quantum-night/</guid>
+      <guid>http://cadams.ca/blog/post/2016/07/06/book-review-quantum-night/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/en/1/18/Quantum_Night_by_Robert_J._Sawyer_Book_Cover.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
@@ -567,20 +567,20 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Book Review: What Does It Mean To Be Human</title>
-      <link>http://cadams.ca/post/2016/06/29/book-review-what-does-it-mean-to-be-human/</link>
+      <link>http://cadams.ca/blog/post/2016/06/29/book-review-what-does-it-mean-to-be-human/</link>
       <pubDate>Wed, 29 Jun 2016 19:49:20 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/06/29/book-review-what-does-it-mean-to-be-human/</guid>
+      <guid>http://cadams.ca/blog/post/2016/06/29/book-review-what-does-it-mean-to-be-human/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://cadams.ca/images/whatDoesItMeanToBeHuman.jpg&#34; alt=&#34;What Does It Mean to Be Human&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://cadams.ca/blog/images/whatDoesItMeanToBeHuman.jpg&#34; alt=&#34;What Does It Mean to Be Human&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://books.google.ca/books?id=DgE8ITskDEcC&#34;&gt;What Does it Mean to be Human&lt;/a&gt;&lt;/em&gt; is the companion book for the Smithsonian Natural History Museum&amp;rsquo;s &lt;a href=&#34;http://humanorigins.si.edu/&#34;&gt;Human Origins&lt;/a&gt; initiative. The book takes the reader on a breathtaking journey through our ancient past to explain when and how we acquired the traits we most closely associate with modern humans.&lt;/p&gt;
 
 &lt;h2 id=&#34;all-of-these-are-human-but-not-homo-sapiens:9e193303cf8ae8cc1645a18b7f1c1e48&#34;&gt;All of these are human, but not &lt;em&gt;Homo sapiens&lt;/em&gt;&lt;/h2&gt;
 
 &lt;p&gt;(Although you could be forgiven for mistaking one!)
-&lt;img src=&#34;http://cadams.ca/images/humans.jpg&#34; alt=&#34;Humans&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://cadams.ca/blog/images/humans.jpg&#34; alt=&#34;Humans&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;While the book covers many topics on the history of our species, I&amp;rsquo;ll focus on three of the items that I found most fascinating:&lt;/p&gt;
 
@@ -644,10 +644,10 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Random Hacks of Kindness 2016</title>
-      <link>http://cadams.ca/post/2016/06/25/random-hacks-of-kindness-2016/</link>
+      <link>http://cadams.ca/blog/post/2016/06/25/random-hacks-of-kindness-2016/</link>
       <pubDate>Sat, 25 Jun 2016 21:28:00 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/06/25/random-hacks-of-kindness-2016/</guid>
+      <guid>http://cadams.ca/blog/post/2016/06/25/random-hacks-of-kindness-2016/</guid>
       <description>&lt;p&gt;This past weekend I participated in a hackathon for &lt;a href=&#34;http://rhok.ca/&#34;&gt;Random Hacks of Kindness&lt;/a&gt; where the goal is to support community organizations with tech solutions.&lt;/p&gt;
 
 &lt;p&gt;I joined the project for the Centre for Social Enterprise Development (&lt;a href=&#34;http://www.cised.ca/&#34;&gt;CISED&lt;/a&gt;). A &lt;em&gt;social enterprise&lt;/em&gt; is a venture whose purpose is to achieve a social mission. There are about 150 social enterprises in Ottawa, which includes ventures such as:&lt;/p&gt;
@@ -685,15 +685,15 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Working with Hugo Templates</title>
-      <link>http://cadams.ca/post/2016/06/04/working-with-hugo-templates/</link>
+      <link>http://cadams.ca/blog/post/2016/06/04/working-with-hugo-templates/</link>
       <pubDate>Sat, 04 Jun 2016 10:53:47 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/06/04/working-with-hugo-templates/</guid>
+      <guid>http://cadams.ca/blog/post/2016/06/04/working-with-hugo-templates/</guid>
       <description>
 
 &lt;p&gt;Hugo uses templates to generate HTML pages. This lets you control your generated HTML content with the help of simple logic. For example, logic such as ranging over all blog posts so that you can print them one at a time onto the page. Hugo uses the &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;Go html/template&lt;/a&gt; library.&lt;/p&gt;
 
-&lt;p&gt;A template can describe an entire page, or just a small portion of a page (for example, just the copyright notice, the header, the footer, etc.). When this happens it is called a &lt;em&gt;partial template&lt;/em&gt;, and that template can be reused just about anywhere else in your website.  Partials are especially useful in Hugo themes, as it gives you the option to override just a small part of the layout to suit your needs. As mentioned in my &lt;a href=&#34;http://cadams.ca/post/2016/05/29/customizing-hugo-themes/&#34;&gt;previous post&lt;/a&gt;, overriding any file in a theme is as simple as dropping in your own version of the file with the same name. Thus templates can be overriden the same way.&lt;/p&gt;
+&lt;p&gt;A template can describe an entire page, or just a small portion of a page (for example, just the copyright notice, the header, the footer, etc.). When this happens it is called a &lt;em&gt;partial template&lt;/em&gt;, and that template can be reused just about anywhere else in your website.  Partials are especially useful in Hugo themes, as it gives you the option to override just a small part of the layout to suit your needs. As mentioned in my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/29/customizing-hugo-themes/&#34;&gt;previous post&lt;/a&gt;, overriding any file in a theme is as simple as dropping in your own version of the file with the same name. Thus templates can be overriden the same way.&lt;/p&gt;
 
 &lt;h1 id=&#34;modifying-the-hyde-x-theme:aca756b519d0e7970786722619fbfdb0&#34;&gt;Modifying the Hyde-X theme&lt;/h1&gt;
 
@@ -719,13 +719,13 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Customizing Hugo Themes</title>
-      <link>http://cadams.ca/post/2016/05/29/customizing-hugo-themes/</link>
+      <link>http://cadams.ca/blog/post/2016/05/29/customizing-hugo-themes/</link>
       <pubDate>Sun, 29 May 2016 15:46:05 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/05/29/customizing-hugo-themes/</guid>
+      <guid>http://cadams.ca/blog/post/2016/05/29/customizing-hugo-themes/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; has a straight forward yet powerful strategy for theming websites.&lt;/p&gt;
 
-&lt;p&gt;The first step is to &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;choose a theme&lt;/a&gt; to use, as your baseline. In an &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;earlier post&lt;/a&gt;, I mentioned that I picked &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; for this website. I liked the general design of Hyde but wanted the extra features provided by Hyde-X such as pagination.&lt;/p&gt;
+&lt;p&gt;The first step is to &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;choose a theme&lt;/a&gt; to use, as your baseline. In an &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;earlier post&lt;/a&gt;, I mentioned that I picked &lt;a href=&#34;https://github.com/zyro/hyde-x&#34;&gt;Hyde-X&lt;/a&gt; for this website. I liked the general design of Hyde but wanted the extra features provided by Hyde-X such as pagination.&lt;/p&gt;
 
 &lt;p&gt;At this point your website will take on the default appearance of the theme. Most themes will also support some kind of configuration parameters out of the box, so this is usually the first step towards customization. For example, Hyde-X lets you configure your social media links, what syntax highlighting to use, and how you want your content paginated.&lt;/p&gt;
 
@@ -746,13 +746,13 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
     
     <item>
       <title>Hosting a Hugo site on GitHub Pages</title>
-      <link>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
+      <link>http://cadams.ca/blog/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
       <pubDate>Thu, 26 May 2016 11:57:11 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
+      <guid>http://cadams.ca/blog/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
       <description>
 
-&lt;p&gt;In my &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
 
 &lt;h1 id=&#34;github-pages:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages&lt;/h1&gt;
 
@@ -762,7 +762,7 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
 
 &lt;h1 id=&#34;github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages and Hugo&lt;/h1&gt;
 
-&lt;p&gt;As mentioned in my &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
+&lt;p&gt;As mentioned in my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams.github.io&#34;&gt;chad-g-adams.github.io&lt;/a&gt;&lt;/li&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keepass on Chad Adams</title>
-    <link>http://cadams.ca/tags/keepass/</link>
+    <link>http://cadams.ca/blog/tags/keepass/</link>
     <description>Recent content in Keepass on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Sun, 07 May 2017 15:39:27 -0400</lastBuildDate>
-    <atom:link href="http://cadams.ca/tags/keepass/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/blog/tags/keepass/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setting up a (free) Password Manager</title>
-      <link>http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/</link>
+      <link>http://cadams.ca/blog/post/2017/05/07/setting-up-a-free-password-manager/</link>
       <pubDate>Sun, 07 May 2017 15:39:27 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2017/05/07/setting-up-a-free-password-manager/</guid>
+      <guid>http://cadams.ca/blog/post/2017/05/07/setting-up-a-free-password-manager/</guid>
       <description>&lt;p&gt;After years of remaining skeptical about password managers (do I really want to put all my eggs in one basket?), I finally caved after realizing that (a) there were simply too many accounts to remember and (b) my email is effectively a basket holding all the eggs already (anyone who gains access to your email account can use the password reset feature to access your other accounts). With that in mind a password manager didn&amp;rsquo;t seem to increase my risk profile any further from it&amp;rsquo;s current state.&lt;/p&gt;
 
 &lt;p&gt;Companies like the popular &lt;em&gt;1Password&lt;/em&gt; offer cloud-based password management across all your devices.. at a cost. $3/month for their basic plan. I was looking for something cheaper than that. Free, ideally.&lt;/p&gt;

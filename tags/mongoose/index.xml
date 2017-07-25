@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongoose on Chad Adams</title>
-    <link>http://cadams.ca/tags/mongoose/</link>
+    <link>http://cadams.ca/blog/tags/mongoose/</link>
     <description>Recent content in Mongoose on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Fri, 14 Oct 2016 22:31:54 -0400</lastBuildDate>
-    <atom:link href="http://cadams.ca/tags/mongoose/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/blog/tags/mongoose/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Integration Testing with Node and Mongo</title>
-      <link>http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/</link>
+      <link>http://cadams.ca/blog/post/2016/10/14/integration-testing-with-node-and-mongo/</link>
       <pubDate>Fri, 14 Oct 2016 22:31:54 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/10/14/integration-testing-with-node-and-mongo/</guid>
+      <guid>http://cadams.ca/blog/post/2016/10/14/integration-testing-with-node-and-mongo/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;ve been building &lt;a href=&#34;https://github.com/cised-ca/social-enterprise-directory&#34;&gt;an application&lt;/a&gt; using Node.js with a MongoDB datastore. Now I want to perform some integration testing (&lt;em&gt;without&lt;/em&gt; mocking the DB layer) to ensure full end-to-end success of the application. Here&amp;rsquo;s how I went about doing this.&lt;/p&gt;

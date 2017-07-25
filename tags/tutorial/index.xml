@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Chad Adams</title>
-    <link>http://cadams.ca/tags/tutorial/</link>
+    <link>http://cadams.ca/blog/tags/tutorial/</link>
     <description>Recent content in Tutorial on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Thu, 26 May 2016 11:57:11 -0400</lastBuildDate>
-    <atom:link href="http://cadams.ca/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/blog/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hosting a Hugo site on GitHub Pages</title>
-      <link>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
+      <link>http://cadams.ca/blog/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
       <pubDate>Thu, 26 May 2016 11:57:11 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
+      <guid>http://cadams.ca/blog/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
       <description>
 
-&lt;p&gt;In my &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
 
 &lt;h1 id=&#34;github-pages:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages&lt;/h1&gt;
 
@@ -28,7 +28,7 @@
 
 &lt;h1 id=&#34;github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages and Hugo&lt;/h1&gt;
 
-&lt;p&gt;As mentioned in my &lt;a href=&#34;http://cadams.ca/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
+&lt;p&gt;As mentioned in my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams.github.io&#34;&gt;chad-g-adams.github.io&lt;/a&gt;&lt;/li&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rhok on Chad Adams</title>
-    <link>http://cadams.ca/tags/rhok/</link>
+    <link>http://cadams.ca/blog/tags/rhok/</link>
     <description>Recent content in Rhok on Chad Adams</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
     <lastBuildDate>Sat, 25 Jun 2016 21:28:00 -0400</lastBuildDate>
-    <atom:link href="http://cadams.ca/tags/rhok/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cadams.ca/blog/tags/rhok/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Random Hacks of Kindness 2016</title>
-      <link>http://cadams.ca/post/2016/06/25/random-hacks-of-kindness-2016/</link>
+      <link>http://cadams.ca/blog/post/2016/06/25/random-hacks-of-kindness-2016/</link>
       <pubDate>Sat, 25 Jun 2016 21:28:00 -0400</pubDate>
       
-      <guid>http://cadams.ca/post/2016/06/25/random-hacks-of-kindness-2016/</guid>
+      <guid>http://cadams.ca/blog/post/2016/06/25/random-hacks-of-kindness-2016/</guid>
       <description>&lt;p&gt;This past weekend I participated in a hackathon for &lt;a href=&#34;http://rhok.ca/&#34;&gt;Random Hacks of Kindness&lt;/a&gt; where the goal is to support community organizations with tech solutions.&lt;/p&gt;
 
 &lt;p&gt;I joined the project for the Centre for Social Enterprise Development (&lt;a href=&#34;http://www.cised.ca/&#34;&gt;CISED&lt;/a&gt;). A &lt;em&gt;social enterprise&lt;/em&gt; is a venture whose purpose is to achieve a social mission. There are about 150 social enterprises in Ottawa, which includes ventures such as:&lt;/p&gt;
