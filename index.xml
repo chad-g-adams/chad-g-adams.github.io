@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Sun, 07 May 2017 15:39:27 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 12 Aug 2017 16:31:56 -0400</lastBuildDate>
     <atom:link href="http://cadams.ca/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Book Review: Do Not Say We Have Nothing</title>
+      <link>http://cadams.ca/blog/post/2017/08/12/book-review-do-not-say-we-have-nothing/</link>
+      <pubDate>Sat, 12 Aug 2017 16:31:56 -0400</pubDate>
+      
+      <guid>http://cadams.ca/blog/post/2017/08/12/book-review-do-not-say-we-have-nothing/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://cadams.ca/blog/images/doNotSayWeHaveNothing.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;do-not-say-we-have-nothing-by-madeleine-thien:c82c375baf10ac0da7e6de1e08fcf4ef&#34;&gt;&lt;em&gt;Do Not Say We Have Nothing&lt;/em&gt; by Madeleine Thien&lt;/h2&gt;
+
+&lt;p&gt;I confess this one took me a while to sink into. There came a point early on when I happened to pause the book and I almost never picked it up again. It sat there on my night table, a reminder, but I&amp;rsquo;d find something else to occupy my time with. Eventually I did continue and I&amp;rsquo;m glad for it.&lt;/p&gt;
+
+&lt;p&gt;The story is a history of modern China told from the perspective of an everyday family comprising of artists and musicians. One of the fascinating things to me was the role of music in this story. How can an author, any author, truly describe music in a language such as English? It&amp;rsquo;s a tough challenge, but Thien really did justice to it. However the idea of translating one language to another is bound to leave omissions; a more considered reading of this book would involve listening to these pieces yourself (unfortunately I was not committed enough for that, although I am listening as I write this).&lt;/p&gt;
+
+&lt;p&gt;Another interesting topic was seeing how different people react when externally imposed pressures are applied on them from society at large. Some can&amp;rsquo;t go on, some conform, some thrive in resistance. At times I could see myself in Sparrow. I have been known to become a bit of a chameleon of sorts. But if you can&amp;rsquo;t do the things you love, the things you were meant to do.. who are you, really?&lt;/p&gt;
+
+&lt;p&gt;Ultimately this book won me over by creating very real characters who behaved in ways I did not understand at all. It&amp;rsquo;s powerful to live in someone else&amp;rsquo;s place and be reminded that your way of looking at things is not the only or the best way.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Setting up a (free) Password Manager</title>
@@ -741,79 +763,6 @@ And think about the Power of 3, no more than 3 bullet points per slide.&lt;/p&gt
 &lt;p&gt;And that takes precendence over the theme&amp;rsquo;s file of the same name.&lt;/p&gt;
 
 &lt;p&gt;In my next post I will go a bit further into more complex customizations.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hosting a Hugo site on GitHub Pages</title>
-      <link>http://cadams.ca/blog/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</link>
-      <pubDate>Thu, 26 May 2016 11:57:11 -0400</pubDate>
-      
-      <guid>http://cadams.ca/blog/post/2016/05/26/hosting-a-hugo-site-on-github-pages/</guid>
-      <description>
-
-&lt;p&gt;In my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt;, I created a static website using Hugo. This article explains how to host such a site for free, using GitHub Pages.&lt;/p&gt;
-
-&lt;h1 id=&#34;github-pages:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages&lt;/h1&gt;
-
-&lt;p&gt;GitHub Pages is a website hosting service provided by GitHub. If you are willing to publish your website in a git repository on GitHub then GitHub Pages will serve your website for free.&lt;/p&gt;
-
-&lt;p&gt;The requirements are that your github repo must be named &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt; and the repo should contain an index.html file.&lt;/p&gt;
-
-&lt;h1 id=&#34;github-pages-and-hugo:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;GitHub Pages and Hugo&lt;/h1&gt;
-
-&lt;p&gt;As mentioned in my &lt;a href=&#34;http://cadams.ca/blog/post/2016/05/24/getting-started-with-hugo/&#34;&gt;previous post&lt;/a&gt; Hugo generates a &lt;code&gt;public/&lt;/code&gt; directory with the full contents of the website. In order to host that on GitHub Pages, we&amp;rsquo;ll simply need to put the contents of the &lt;code&gt;public/&lt;/code&gt; folder in an appropriately named github repo:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams.github.io&#34;&gt;chad-g-adams.github.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;After a few minutes, the website will be live at &lt;a href=&#34;http://chad-g-adams.github.io/&#34;&gt;http://chad-g-adams.github.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;syncing-hugo-content-with-github-pages:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;Syncing Hugo content with GitHub Pages&lt;/h1&gt;
-
-&lt;p&gt;Now we have two git repositories.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;One for holding the website content: &lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams-hugo&#34;&gt;chad-g-adams-hugo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;And one for holding the actual generated website which is used for hosting: &lt;a href=&#34;https://github.com/chad-g-adams/chad-g-adams.github.io&#34;&gt;chad-g-adams.github.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The issue is, when I make changes to my site content (by working in the first repo), I would like to see those changes applied to second repo so that it can take effect on &lt;a href=&#34;http://chad-g-adams.github.io/&#34;&gt;http://chad-g-adams.github.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;While inside my first repository, when I generate my website using command &lt;code&gt;hugo serve&lt;/code&gt;a folder called &lt;code&gt;public/&lt;/code&gt; is generated in the working directory. Wouldn&amp;rsquo;t it be great if that folder could be automatically part of the second git repo? In other words, having one git repo inside of another?&lt;/p&gt;
-
-&lt;p&gt;This can be accomplished in different ways. Probably the simplest way is to add &lt;code&gt;public/&lt;/code&gt; to &lt;code&gt;.gitignore&lt;/code&gt; of the parent repo, and then clone the child repo separately into that directory.&lt;/p&gt;
-
-&lt;p&gt;Another way is to use &lt;a href=&#34;https://git-scm.com/book/en/v2/Git-Tools-Submodules&#34;&gt;git submodules&lt;/a&gt;. This allows you to keep a git repository as a subdirectory of another git repository. The advantage is that when you run &lt;code&gt;git status&lt;/code&gt; in the parent repo it will now also summarize the status of the child repo to remind you if there are outstanding changes&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;modified:   public/ (new commits, modified content)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Either way, Hugo will now generate the site content directly into the second repo where it can then be easily committed and pushed.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-note-on-hugo-generation:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;A note on Hugo generation&lt;/h2&gt;
-
-&lt;p&gt;Hugo assumes the &lt;code&gt;public/&lt;/code&gt; directory is empty when it generates the content. For that reason you should clean out the directory before re-generation or you risk deleted posts/pages living on.&lt;/p&gt;
-
-&lt;h1 id=&#34;automating-the-deploy-steps:880a44ed049d0dd561a1cb819f7c9037&#34;&gt;Automating the Deploy Steps&lt;/h1&gt;
-
-&lt;p&gt;In order to automate the various steps required to deploy my website, I created a simple script &lt;code&gt;deploy.sh&lt;/code&gt; to run all the steps in one shot.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/sh
-
-# clean any old website data
-rm -r public/*
-
-# generate new website data
-hugo
-
-# commit and push the new content
-cd public
-git add -A
-git commit -m &amp;quot;website update&amp;quot;
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
