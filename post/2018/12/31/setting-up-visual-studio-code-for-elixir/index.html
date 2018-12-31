@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Setting up Visual Studio Code for Elixir &middot; Chad Adams</title>
+
+  
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/poole.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/hyde.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/poole-overrides.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/hyde-overrides.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/hyde-x.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/highlight/default.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://cadams.ca/blog/css/chad.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cadams.ca/blog/touch-icon-144-precomposed.png">
+  <link href="https://cadams.ca/blog/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Elixir is a programming language that I am in the process of learning, and which I use at work. This post documents the settings I am using to develop in elixir using the VSCode editor.">
+  <meta name="keywords" content="elixir,vscode,visual studio">
+  
+</head>
+<body class="theme-chad">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Chad Adams</h1>
+      <p class="lead">Code etc</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://cadams.ca/blog/"></a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-rss'></i><a href="https://cadams.ca/blog/"> My Blog</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-keyboard-o'></i><a href="https://cadams.ca/blog/categories/code/"> Coding Adventures</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-book'></i><a href="https://cadams.ca/blog/categories/book/"> Books</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/chad-g-adams"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/chad_g_adams"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="https://cadams.ca/blog/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2018 <a href="https://cadams.ca/blog/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Setting up Visual Studio Code for Elixir</h1>
+    <span class="post-date">Dec 31, 2018 &middot; 2 minute read
+	 
+ 
+	
+		   
+	
+ 
+
+
+	<br/>
+	
+	 
+		<a class="label" href="https://cadams.ca/blog/tags/elixir">elixir</a><a class="label" href="https://cadams.ca/blog/tags/visual-studio-code">visual studio code</a> 
+	
+
+
+ </span>
+    
+
+<p>Elixir is a programming language that I am in the process of learning, and which I use at work. This post documents the settings I am using to develop in elixir using the VSCode editor.</p>
+
+<h2 id="1-language-support:59fcf391e193ccd025a67f034b3ef13d">1. Language Support</h2>
+
+<p>Install extension <code>ElixirLS</code></p>
+
+<p>Out of the box this gives you:</p>
+
+<ul>
+<li>autocomplete, navigation, dialyzer (aka static analysis/linting) and debugging capabilities. Hooray!</li>
+</ul>
+
+<h2 id="2-formatting:59fcf391e193ccd025a67f034b3ef13d">2. Formatting</h2>
+
+<p>Elixir is an auto-formatted language for <a href="https://hashrocket.com/blog/posts/format-your-elixir-code-now">reasons</a>, hence <code>mix format</code> is your friend. In your VSCode Settings, hit the checkbox for &ldquo;Editor: Format on Save&rdquo; to run this on every save.</p>
+
+<h2 id="3-test-execution:59fcf391e193ccd025a67f034b3ef13d">3. Test Execution</h2>
+
+<p>I commonly run tests three different ways:</p>
+
+<ol>
+<li>Run a single test. Most frequently used while developing.</li>
+<li>Run <em>all</em> the tests. Used for regression testing.</li>
+<li>Run all the tests from a single file. Sometimes useful while developing.</li>
+</ol>
+
+<p>Set these up as Tasks in your tasks.json as follows:</p>
+
+<pre><code>  {
+      &quot;label&quot;: &quot;mix test&quot;,
+      &quot;type&quot;: &quot;shell&quot;,
+      &quot;command&quot;: &quot;mix test&quot;,
+      &quot;group&quot;: &quot;test&quot;,
+      &quot;presentation&quot;: {
+          &quot;echo&quot;: true,
+          &quot;reveal&quot;: &quot;always&quot;,
+          &quot;focus&quot;: false,
+          &quot;panel&quot;: &quot;shared&quot;,
+          &quot;clear&quot;: true
+      }
+  },
+  {
+      &quot;label&quot;: &quot;single test&quot;,
+      &quot;type&quot;: &quot;shell&quot;,
+      &quot;command&quot;: &quot;mix test ${relativeFile}:${lineNumber}&quot;,
+      &quot;group&quot;: &quot;test&quot;,
+      &quot;presentation&quot;: {
+          &quot;echo&quot;: true,
+          &quot;reveal&quot;: &quot;always&quot;,
+          &quot;focus&quot;: false,
+          &quot;panel&quot;: &quot;shared&quot;,
+          &quot;clear&quot;: true
+      },
+      &quot;runOptions&quot;: {
+          &quot;reevaluateOnRerun&quot;: false
+      }
+  },
+  {
+      &quot;label&quot;: &quot;test current file&quot;,
+      &quot;type&quot;: &quot;shell&quot;,
+      &quot;command&quot;: &quot;mix test ${relativeFile}&quot;,
+      &quot;group&quot;: &quot;test&quot;,
+      &quot;presentation&quot;: {
+          &quot;echo&quot;: true,
+          &quot;reveal&quot;: &quot;always&quot;,
+          &quot;focus&quot;: false,
+          &quot;panel&quot;: &quot;shared&quot;,
+          &quot;clear&quot;: true
+      },
+      &quot;runOptions&quot;: {
+          &quot;reevaluateOnRerun&quot;: false
+      }
+  }
+
+</code></pre>
+
+<p>You can also create hotkeys to launch your tests. I do it like:</p>
+
+<pre><code>{
+  &quot;key&quot;: &quot;ctrl-s&quot;,
+  &quot;command&quot;: &quot;workbench.action.tasks.runTask&quot;,
+  &quot;args&quot;: &quot;mix test&quot;
+},
+{
+  &quot;key&quot;: &quot;ctrl+shift+s&quot;,
+  &quot;command&quot;: &quot;workbench.action.tasks.runTask&quot;,
+  &quot;args&quot;: &quot;single test&quot;,
+  &quot;when&quot;: &quot;editorTextFocus&quot;
+}
+</code></pre>
+
+<p>Now it&rsquo;s super easy to run a single test, or all the tests, on a whim.</p>
+
+<p>Use in combination with the standard &ldquo;Rerun Last Task&rdquo; (new in vscode 1.30) to run your single test over and over again without having to switch windows.</p>
+
+<p>With credit to:</p>
+
+<ul>
+<li><a href="https://pragdave.me/blog/2018/06/13/visual-studio-code-elixir-tests.html">https://pragdave.me/blog/2018/06/13/visual-studio-code-elixir-tests.html</a></li>
+</ul>
+
+<p>​</p>
+
+  </div>
+  
+</div>
+
+
+
+
+<script src="https://cadams.ca/blog/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

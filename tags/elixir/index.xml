@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elixir on Chad Adams</title>
+    <link>https://cadams.ca/blog/tags/elixir/</link>
+    <description>Recent content in Elixir on Chad Adams</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Chad Adams</copyright>
+    <lastBuildDate>Mon, 31 Dec 2018 13:50:44 -0500</lastBuildDate>
+    <atom:link href="https://cadams.ca/blog/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setting up Visual Studio Code for Elixir</title>
+      <link>https://cadams.ca/blog/post/2018/12/31/setting-up-visual-studio-code-for-elixir/</link>
+      <pubDate>Mon, 31 Dec 2018 13:50:44 -0500</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2018/12/31/setting-up-visual-studio-code-for-elixir/</guid>
+      <description>
+
+&lt;p&gt;Elixir is a programming language that I am in the process of learning, and which I use at work. This post documents the settings I am using to develop in elixir using the VSCode editor.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-language-support:59fcf391e193ccd025a67f034b3ef13d&#34;&gt;1. Language Support&lt;/h2&gt;
+
+&lt;p&gt;Install extension &lt;code&gt;ElixirLS&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Out of the box this gives you:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;autocomplete, navigation, dialyzer (aka static analysis/linting) and debugging capabilities. Hooray!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-formatting:59fcf391e193ccd025a67f034b3ef13d&#34;&gt;2. Formatting&lt;/h2&gt;
+
+&lt;p&gt;Elixir is an auto-formatted language for &lt;a href=&#34;https://hashrocket.com/blog/posts/format-your-elixir-code-now&#34;&gt;reasons&lt;/a&gt;, hence &lt;code&gt;mix format&lt;/code&gt; is your friend. In your VSCode Settings, hit the checkbox for &amp;ldquo;Editor: Format on Save&amp;rdquo; to run this on every save.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-test-execution:59fcf391e193ccd025a67f034b3ef13d&#34;&gt;3. Test Execution&lt;/h2&gt;
+
+&lt;p&gt;I commonly run tests three different ways:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Run a single test. Most frequently used while developing.&lt;/li&gt;
+&lt;li&gt;Run &lt;em&gt;all&lt;/em&gt; the tests. Used for regression testing.&lt;/li&gt;
+&lt;li&gt;Run all the tests from a single file. Sometimes useful while developing.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Set these up as Tasks in your tasks.json as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  {
+      &amp;quot;label&amp;quot;: &amp;quot;mix test&amp;quot;,
+      &amp;quot;type&amp;quot;: &amp;quot;shell&amp;quot;,
+      &amp;quot;command&amp;quot;: &amp;quot;mix test&amp;quot;,
+      &amp;quot;group&amp;quot;: &amp;quot;test&amp;quot;,
+      &amp;quot;presentation&amp;quot;: {
+          &amp;quot;echo&amp;quot;: true,
+          &amp;quot;reveal&amp;quot;: &amp;quot;always&amp;quot;,
+          &amp;quot;focus&amp;quot;: false,
+          &amp;quot;panel&amp;quot;: &amp;quot;shared&amp;quot;,
+          &amp;quot;clear&amp;quot;: true
+      }
+  },
+  {
+      &amp;quot;label&amp;quot;: &amp;quot;single test&amp;quot;,
+      &amp;quot;type&amp;quot;: &amp;quot;shell&amp;quot;,
+      &amp;quot;command&amp;quot;: &amp;quot;mix test ${relativeFile}:${lineNumber}&amp;quot;,
+      &amp;quot;group&amp;quot;: &amp;quot;test&amp;quot;,
+      &amp;quot;presentation&amp;quot;: {
+          &amp;quot;echo&amp;quot;: true,
+          &amp;quot;reveal&amp;quot;: &amp;quot;always&amp;quot;,
+          &amp;quot;focus&amp;quot;: false,
+          &amp;quot;panel&amp;quot;: &amp;quot;shared&amp;quot;,
+          &amp;quot;clear&amp;quot;: true
+      },
+      &amp;quot;runOptions&amp;quot;: {
+          &amp;quot;reevaluateOnRerun&amp;quot;: false
+      }
+  },
+  {
+      &amp;quot;label&amp;quot;: &amp;quot;test current file&amp;quot;,
+      &amp;quot;type&amp;quot;: &amp;quot;shell&amp;quot;,
+      &amp;quot;command&amp;quot;: &amp;quot;mix test ${relativeFile}&amp;quot;,
+      &amp;quot;group&amp;quot;: &amp;quot;test&amp;quot;,
+      &amp;quot;presentation&amp;quot;: {
+          &amp;quot;echo&amp;quot;: true,
+          &amp;quot;reveal&amp;quot;: &amp;quot;always&amp;quot;,
+          &amp;quot;focus&amp;quot;: false,
+          &amp;quot;panel&amp;quot;: &amp;quot;shared&amp;quot;,
+          &amp;quot;clear&amp;quot;: true
+      },
+      &amp;quot;runOptions&amp;quot;: {
+          &amp;quot;reevaluateOnRerun&amp;quot;: false
+      }
+  }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also create hotkeys to launch your tests. I do it like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;key&amp;quot;: &amp;quot;ctrl-s&amp;quot;,
+  &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
+  &amp;quot;args&amp;quot;: &amp;quot;mix test&amp;quot;
+},
+{
+  &amp;quot;key&amp;quot;: &amp;quot;ctrl+shift+s&amp;quot;,
+  &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
+  &amp;quot;args&amp;quot;: &amp;quot;single test&amp;quot;,
+  &amp;quot;when&amp;quot;: &amp;quot;editorTextFocus&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s super easy to run a single test, or all the tests, on a whim.&lt;/p&gt;
+
+&lt;p&gt;Use in combination with the standard &amp;ldquo;Rerun Last Task&amp;rdquo; (new in vscode 1.30) to run your single test over and over again without having to switch windows.&lt;/p&gt;
+
+&lt;p&gt;With credit to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pragdave.me/blog/2018/06/13/visual-studio-code-elixir-tests.html&#34;&gt;https://pragdave.me/blog/2018/06/13/visual-studio-code-elixir-tests.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
