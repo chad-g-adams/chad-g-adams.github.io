@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Advent of Code 2018 &middot; Chad Adams</title>
+
+  
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/poole.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/hyde.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/poole-overrides.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/hyde-overrides.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/hyde-x.css">
+  <link rel="stylesheet" href="https://cadams.ca/blog/css/highlight/default.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://cadams.ca/blog/css/chad.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cadams.ca/blog/touch-icon-144-precomposed.png">
+  <link href="https://cadams.ca/blog/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Chad Adams">
+  <meta name="keywords" content="elixir,advent">
+  
+</head>
+<body class="theme-chad">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>Chad Adams</h1>
+      <p class="lead">Code etc</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://cadams.ca/blog/"></a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-rss'></i><a href="https://cadams.ca/blog/"> My Blog</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-keyboard-o'></i><a href="https://cadams.ca/blog/categories/code/"> Coding Adventures</a></li>
+      
+      <li class="sidebar-nav-item"><i class='fa fa-book'></i><a href="https://cadams.ca/blog/categories/book/"> Books</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/chad-g-adams"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/chad_g_adams"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="https://cadams.ca/blog/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2019 <a href="https://cadams.ca/blog/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Advent of Code 2018</h1>
+    <span class="post-date">Feb 12, 2019 &middot; 3 minute read
+	 
+ 
+	
+		   
+	
+ 
+
+
+	<br/>
+	
+	 
+		<a class="label" href="https://cadams.ca/blog/tags/elixir">elixir</a> 
+	
+
+
+ </span>
+    
+
+<p>This past December I discovered the <strong><a href="https://adventofcode.com/2018">Advent of Code</a></strong> challenge, in which you get a different coding puzzle for each day in December leading up to Christmas. The puzzles can be solved in any programming language of your choice.</p>
+
+<p>I decided to solve the puzzles in Elixir, which is a newer language that I am starting to use at work. The creator of Elixir, José Valim, was solving the puzzles as well and <a href="http://blog.plataformatec.com.br/2018/11/lets-learn-elixir-together-with-advent-of-code/">live streaming his solutions</a>. Other Elixir experts were also publishing solutions, such as <a href="https://github.com/sasa1977/aoc">Saša Jurić</a>. This was so cool! A fabulous way to learn a new language.</p>
+
+<p>Due to time constraints I only attempted about half of the puzzles with my <a href="https://github.com/chad-g-adams/advent-of-code-2018">solutions posted here</a>. I was hoping to go back and finish the rest of the puzzles but that hasn&rsquo;t happened so I&rsquo;m wrapping this up with a blog post now.</p>
+
+<h2 id="commentary:0647481dad1b7f4b21d4a5bad3077cd7">Commentary</h2>
+
+<p>Partway through I realized it would be helpful to myself to capture personal insights for each solution, so I left some commentary in the code solutions themselves which I am reproducing here:</p>
+
+<table>
+<tr>
+
+<td style="width: 20%">
+Day 5 
+</td>
+<td>
+<sub>
+    For this solution, I found that converting each individual character to a String for purpose of doing downcase() 
+    was performance impacting (total 30 seconds to solve puzzle). So I switched to using assumption
+    that input was only ascii letters (and added a validation check to ensure this assumption holds). 
+    Thus I could compare upper/lower case by adding 32 to the value instead of converting to string. Solution runs 15x faster.
+    </sub>
+</td>
+
+<tr>
+<td>
+Day 6
+</td>
+
+<td>
+<sub>
+The performance of my solution is lacking, it took 30 seconds to solve Part 1 on my laptop.
+Part 2 solution was even worse - 2 min 26 s.
+If I had more time I would go back and optimize!
+</sub>
+</td>
+</tr>
+
+<tr>
+<td>
+Day 7
+</td>
+<td>
+<sub>
+    First part was OK, second part took a long time to solve.
+    First puzzle where my code worked for the test data but didn't work for the full solution.
+    (Turned out I read the challenge wrong.. was using wrong number of workers).
+    Passing a lot of parameters around. Might be easier to pass state around as a
+    single map structure than as individual parameters.
+    
+</sub>
+</td>
+</tr>
+
+<tr>
+<td>
+ Day 8
+</td>
+<td>
+
+<sub>
+    Got bitten by elixir when doing efficient building a list by appending to the start
+    but then forgetting to reverse list at the end (when order became important)!
+    This caused some grief. I could have noticed this error sooner if I ran the tests more frequently
+    during development.
+
+</sub>
+</td>
+</tr>
+<tr>
+<td>
+Day 9
+</td>
+<td>
+
+<sub>
+    Nice to use Stream.unfold for the first time, also learned how to sleep in elixir.
+
+</sub>
+</td>
+</tr>
+<tr>
+<td>
+Day 10
+</td>
+<td>
+
+<sub>
+    Things I learned today, you can do pattern matching in anonymous functions!
+    Part 1 was solved in a straightforward, albeit not great performance way.
+    Part 2 The non-performant solution was no longer reasonable. I tried a few
+     optimizations but couldn't make it fast enough. Then I found this hint:
+     https://en.wikipedia.org/wiki/Summed-area_table
+     but by that point it was the end of the night and I didn't feel like implementing it.
+
+</sub>
+</td>
+</tr>
+<tr>
+<td>
+Day 18
+</td>
+<td>
+
+<sub>
+  Felt really good about solving this one, my growing familiarity with the elixir
+  modules is starting to pay off. Assist to my wife for talking through Part 2 strategy with me.
+  
+</sub>
+</td>
+</tr>
+</table>
+
+  </div>
+  
+</div>
+
+
+
+
+<script src="https://cadams.ca/blog/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

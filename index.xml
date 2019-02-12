@@ -7,8 +7,186 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Mon, 31 Dec 2018 13:50:44 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Feb 2019 21:03:34 -0500</lastBuildDate>
     <atom:link href="https://cadams.ca/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Soundtrack of 2018</title>
+      <link>https://cadams.ca/blog/post/2019/02/12/soundtrack-of-2018/</link>
+      <pubDate>Tue, 12 Feb 2019 21:03:34 -0500</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2019/02/12/soundtrack-of-2018/</guid>
+      <description>
+
+&lt;p&gt;Music has a curious way of permeating your life, such that years later a song can stir up forgotten memories and emotions. Each song is precious in a way that only we can fully understand.&lt;/p&gt;
+
+&lt;p&gt;These songs formed the soundtrack of my life in 2018.&lt;/p&gt;
+
+&lt;h2 id=&#34;black-violin-stereotypes-album-2015:3b321d1d7fe4b2b31d5166b39ac74672&#34;&gt;Black Violin - Stereotypes (album 2015)&lt;/h2&gt;
+
+&lt;p&gt;A mix of hip hop and classical, &lt;a href=&#34;http://blackviolin.net/videos/&#34;&gt;Black Violin&lt;/a&gt; pushes the boundaries of each genre. I&amp;rsquo;ve actually been listening to this album for a couple years now and still not tired of it!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cadams.ca/blog/images/blackViolin.png&#34; alt=&#34;Stereotypes&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;dr-toast-light:3b321d1d7fe4b2b31d5166b39ac74672&#34;&gt;Dr. Toast - Light&lt;/h2&gt;
+
+&lt;p&gt;A constant at the yoga studio, this song takes me straight to my centered happy place.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://music.drtoast.com/track/light&#34;&gt;https://music.drtoast.com/track/light&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;bonobo-sweetness-bootleg-album-2002:3b321d1d7fe4b2b31d5166b39ac74672&#34;&gt;Bonobo - Sweetness (bootleg album 2002)&lt;/h2&gt;
+
+&lt;p&gt;This was my album of choice to listen while coding this year. Enough repetition to let your mind focus, enough complexity to keep things interesting when you surface.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/wdpDtAjZuWQ&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;the-balconies-show-you-album-2012:3b321d1d7fe4b2b31d5166b39ac74672&#34;&gt;The Balconies - Show You (album 2012)&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/The_Balconies&#34;&gt;The Balconies&lt;/a&gt; are a local Ottawa rock/pop band who I was into 10 years ago. This album was recorded in 2012 but never released because the band&amp;rsquo;s style had changed in the intervening time, so they kept it hidden away for all these years. I was more a fan of their old style anyway so once the band folded and released the forgotten album I was very happy to have access to it.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//player.vimeo.com/video/8721557&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;  
+
+&lt;p&gt;&amp;nbsp;&lt;br /&gt;
+&amp;nbsp;&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+
+&lt;h2 id=&#34;various-irish-artists-musical-pub-crawl-album:3b321d1d7fe4b2b31d5166b39ac74672&#34;&gt;Various Irish artists - Musical Pub Crawl (album)&lt;/h2&gt;
+
+&lt;p&gt;Our travels in Ireland this year took as to a &lt;a href=&#34;https://www.musicalpubcrawl.com&#34;&gt;musical pub crawl&lt;/a&gt; in Dublin. We were able to purchase an album of traditional Irish music which is exceptional but I cannot find it online. It&amp;rsquo;s become our staple soundtrack this year while cooking and doing stuff around the house.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Advent of Code 2018</title>
+      <link>https://cadams.ca/blog/post/2019/02/12/advent-of-code-2018/</link>
+      <pubDate>Tue, 12 Feb 2019 13:20:22 -0500</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2019/02/12/advent-of-code-2018/</guid>
+      <description>
+
+&lt;p&gt;This past December I discovered the &lt;strong&gt;&lt;a href=&#34;https://adventofcode.com/2018&#34;&gt;Advent of Code&lt;/a&gt;&lt;/strong&gt; challenge, in which you get a different coding puzzle for each day in December leading up to Christmas. The puzzles can be solved in any programming language of your choice.&lt;/p&gt;
+
+&lt;p&gt;I decided to solve the puzzles in Elixir, which is a newer language that I am starting to use at work. The creator of Elixir, José Valim, was solving the puzzles as well and &lt;a href=&#34;http://blog.plataformatec.com.br/2018/11/lets-learn-elixir-together-with-advent-of-code/&#34;&gt;live streaming his solutions&lt;/a&gt;. Other Elixir experts were also publishing solutions, such as &lt;a href=&#34;https://github.com/sasa1977/aoc&#34;&gt;Saša Jurić&lt;/a&gt;. This was so cool! A fabulous way to learn a new language.&lt;/p&gt;
+
+&lt;p&gt;Due to time constraints I only attempted about half of the puzzles with my &lt;a href=&#34;https://github.com/chad-g-adams/advent-of-code-2018&#34;&gt;solutions posted here&lt;/a&gt;. I was hoping to go back and finish the rest of the puzzles but that hasn&amp;rsquo;t happened so I&amp;rsquo;m wrapping this up with a blog post now.&lt;/p&gt;
+
+&lt;h2 id=&#34;commentary:0647481dad1b7f4b21d4a5bad3077cd7&#34;&gt;Commentary&lt;/h2&gt;
+
+&lt;p&gt;Partway through I realized it would be helpful to myself to capture personal insights for each solution, so I left some commentary in the code solutions themselves which I am reproducing here:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;tr&gt;
+
+&lt;td style=&#34;width: 20%&#34;&gt;
+Day 5 
+&lt;/td&gt;
+&lt;td&gt;
+&lt;sub&gt;
+    For this solution, I found that converting each individual character to a String for purpose of doing downcase() 
+    was performance impacting (total 30 seconds to solve puzzle). So I switched to using assumption
+    that input was only ascii letters (and added a validation check to ensure this assumption holds). 
+    Thus I could compare upper/lower case by adding 32 to the value instead of converting to string. Solution runs 15x faster.
+    &lt;/sub&gt;
+&lt;/td&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+Day 6
+&lt;/td&gt;
+
+&lt;td&gt;
+&lt;sub&gt;
+The performance of my solution is lacking, it took 30 seconds to solve Part 1 on my laptop.
+Part 2 solution was even worse - 2 min 26 s.
+If I had more time I would go back and optimize!
+&lt;/sub&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+Day 7
+&lt;/td&gt;
+&lt;td&gt;
+&lt;sub&gt;
+    First part was OK, second part took a long time to solve.
+    First puzzle where my code worked for the test data but didn&#39;t work for the full solution.
+    (Turned out I read the challenge wrong.. was using wrong number of workers).
+    Passing a lot of parameters around. Might be easier to pass state around as a
+    single map structure than as individual parameters.
+    
+&lt;/sub&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;
+ Day 8
+&lt;/td&gt;
+&lt;td&gt;
+
+&lt;sub&gt;
+    Got bitten by elixir when doing efficient building a list by appending to the start
+    but then forgetting to reverse list at the end (when order became important)!
+    This caused some grief. I could have noticed this error sooner if I ran the tests more frequently
+    during development.
+
+&lt;/sub&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Day 9
+&lt;/td&gt;
+&lt;td&gt;
+
+&lt;sub&gt;
+    Nice to use Stream.unfold for the first time, also learned how to sleep in elixir.
+
+&lt;/sub&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Day 10
+&lt;/td&gt;
+&lt;td&gt;
+
+&lt;sub&gt;
+    Things I learned today, you can do pattern matching in anonymous functions!
+    Part 1 was solved in a straightforward, albeit not great performance way.
+    Part 2 The non-performant solution was no longer reasonable. I tried a few
+     optimizations but couldn&#39;t make it fast enough. Then I found this hint:
+     https://en.wikipedia.org/wiki/Summed-area_table
+     but by that point it was the end of the night and I didn&#39;t feel like implementing it.
+
+&lt;/sub&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Day 18
+&lt;/td&gt;
+&lt;td&gt;
+
+&lt;sub&gt;
+  Felt really good about solving this one, my growing familiarity with the elixir
+  modules is starting to pay off. Assist to my wife for talking through Part 2 strategy with me.
+  
+&lt;/sub&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Setting up Visual Studio Code for Elixir</title>
@@ -585,6 +763,10 @@ dirtcure.com/about/&lt;/p&gt;
 &lt;p&gt;The drawback with this approach is it doesn&amp;rsquo;t have cloud sync. I could have hosted my password database in my own cloud if I really wanted to, but actually I&amp;rsquo;ve found a simpler way to sync. These days, I always have my phone nearby! Hence the password database on my phone becomes my primary database, and all edits are done in my phone (it&amp;rsquo;s pretty rare that I have to add or change a password anyway). Then periodically about once a month or so, when I normally backup my phone I also transfer my password database over at the same time.&lt;/p&gt;
 
 &lt;p&gt;This is a very simple approach to password management, but it meets my needs. I guess you can look at it as a cheap alternative to the pay services out there.&lt;/p&gt;
+
+&lt;p&gt;Update:&lt;/p&gt;
+
+&lt;p&gt;Two years later I am still using this system and find it works well for me. One gotcha is at one point my KeePassDroid app on my phone corrupted the password file (software bug that&amp;rsquo;s been fixed, apparently). The file still worked on my phone but I could not unlock the passwords on any other device and I had to rollback to a backup file. So it&amp;rsquo;s important to keep a backup, and also be careful not to overwrite the backup by mistake (everytime I take a backup I put the date in the backup filename like &amp;ldquo;passwords.May2019.kdbx&amp;rdquo;, this is a good practice to follow).&lt;/p&gt;
 </description>
     </item>
     
@@ -731,68 +913,6 @@ dirtcure.com/about/&lt;/p&gt;
 &lt;p&gt;Taking the idea one step further, we could also have a &amp;ldquo;Voter Registration Day&amp;rdquo; as the election kicks off, and make that a national holiday as well. I&amp;rsquo;m sure our economy can survive a couple extra holidays every few years.&lt;/p&gt;
 
 &lt;p&gt;Well, there you have some ideas on what Canada can do. I don&amp;rsquo;t normally comment much on politics but the global situation seems to be getting a bit extreme so I wanted to weigh in with a few thoughts. Thanks for reading.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>WeAllProfit.ca Launched!</title>
-      <link>https://cadams.ca/blog/post/2016/12/13/weallprofit.ca-launched/</link>
-      <pubDate>Tue, 13 Dec 2016 07:03:15 -0500</pubDate>
-      
-      <guid>https://cadams.ca/blog/post/2016/12/13/weallprofit.ca-launched/</guid>
-      <description>&lt;p&gt;A website I have been helping to build for &lt;a href=&#34;http://csedottawa.ca/&#34;&gt;CSED&lt;/a&gt; has officially launched!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://WeAllProfit.ca&#34;&gt;WeAllProfit.ca&lt;/a&gt; is a directory of social enterprises in Ottawa. A &lt;em&gt;social enterprise&lt;/em&gt; is a venture which has a  mission that goes beyond profit. This can mean offering employment to vulnerable or disabled people, protecting the environment, or passing their profits on to a charitable organization. Check out the &lt;a href=&#34;https://WeAllProfit.ca&#34;&gt;website&lt;/a&gt; for many examples of social enterprises in Ottawa.&lt;/p&gt;
-
-&lt;p&gt;This website will serve customers of the social enterprise sector by gathering all the local enterprises listings in one place, where a potential customer such as yourself can discover and browse the offerings. We hope this will inspire you to shop in the social enterprise sector, and we are looking forward to adding many more enterprises as we go!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Book Review: Into the Silence</title>
-      <link>https://cadams.ca/blog/post/2016/11/13/book-review-into-the-silence/</link>
-      <pubDate>Sun, 13 Nov 2016 16:20:11 -0500</pubDate>
-      
-      <guid>https://cadams.ca/blog/post/2016/11/13/book-review-into-the-silence/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://cadams.ca/blog/images/into-the-silence.png&#34; alt=&#34;Into the Silence&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;the-great-war-mallory-and-the-conquest-of-everest:430078025ad00d05681f6e91e31d9b31&#34;&gt;The Great War, Mallory, and the Conquest of Everest&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Into the Silence&lt;/em&gt; by Wade Davis recounts the failed 1920s Everest expeditions, the first ever attempts on the mountain. But it&amp;rsquo;s much more than that.&lt;/p&gt;
-
-&lt;p&gt;All the climbers were shaped by the Great War, and so the book begins there. This leads into an engrossing look at the chaos, the folly, and the haunting reality of a generation of men who would return from war with wounds that could never heal. If the book had been solely these initial chapters on the war, and that was it, I would have been perfectly satisfied. What a treat to realize this was only the introduction, a springboard for what was still yet to come.&lt;/p&gt;
-
-&lt;p&gt;One thing that stood out to me while reading this book is how these events were happening in a fairly modern, yet entirely different time. From a sensibilities point of view, the Great War had largely broken the spell of idealism, nobility, and purpose in many. Yet for others, it spurred a retreat away from the misery of daily life and towards a more idealistic meaning. The Everest expeditions could be seen as an outlet for the latter, and the men who volunteered were sometimes spiritual, sometimes adventure seekers, always in pursuit of something bigger than themselves. Davis does a nice job of interpreting these distinctions for the modern reader.&lt;/p&gt;
-
-&lt;p&gt;Another way to tell you were being transported into another time is the wonderful collection of correspondence (yes, letter writing was a daily thing!) and it was at times extremely eloquent.. This was a vast wealth of primary material which Davis spent a decade researching, and it led to convincing character portraits:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Death&amp;rsquo;s power lies in fear, which flourishes in the imagination and the unknown. For Wheeler there was nothing more that death could show him, short of his own.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;One of the tricky things as a reader is dealing with the large cast of characters involved, spanning three expeditions, and I admit to having some difficulty keeping all the persons straight in my head. In the first expedition, Davis had you cheering for the Canadian surveyor Wheeler who was not originally participating in a climbing role but nevertheless won over Mallory and the rest of the team and was ultimately appointed to the climbing party.&lt;/p&gt;
-
-&lt;p&gt;Of the storylines in the second expedition, none resonated more than George Finch, the skinny scientist whose revolutionary tactics about bottled oxygen led him to achieve a new height record, despite far worse support than the main climbing party.  A Mallory/Finch climbing tandem is one of those &amp;ldquo;what if&amp;rsquo;s&amp;rdquo; the reader can only wonder about..&lt;/p&gt;
-
-&lt;p&gt;I have to admit that over the course of the book, neither through the author&amp;rsquo;s lens nor through Mallory&amp;rsquo;s personal writings, did I ever fully connect or empathize with Mallory. Hence the fateful end was not a tear jerker for me in the same way as other Everest &lt;a href=&#34;https://en.wikipedia.org/wiki/Into_Thin_Air&#34;&gt;stories have been&lt;/a&gt;. Nevertheless, Davis delivers an extremely powerful conclusion to the book. In stark contrast to all the earlier climbing activities, where every action can be analyzed and scrutinized through the heaps of correspondence, private writings, and post reflections by the principle actors, at the moment when Mallory and Irvine depart up the mountain together never to return, the author and his readers are left with a big hole of information to wonder about. We&amp;rsquo;re simply left with&amp;hellip; the silence.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s powerful and it will have your imagination running in overdrive.&lt;/p&gt;
-
-&lt;p&gt;Overall, the recounting of this climbing history leaves the reader a lasting impression of &lt;em&gt;&amp;ldquo;What If&amp;rdquo;&lt;/em&gt; as each expedition made mistakes (either through membership composition or on the mountain itself) or suffered unpreventable setbacks that taxed the climbers, preventing them from reaching their full potential. In ideal conditions, who can say how far they would have climbed? Or so the book suggests. But I think the real lesson of Everest, clear even in these first attempts at the mountain, is how normal this kind of result is. Sure you may be fit enough to climb the mountain, but count on dealing with any two or more of the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;altitude sickness&lt;/li&gt;
-&lt;li&gt;inadequate support/teammates&lt;/li&gt;
-&lt;li&gt;avalanche&lt;/li&gt;
-&lt;li&gt;illness/lack of nutrition&lt;/li&gt;
-&lt;li&gt;unforgiving weather&lt;/li&gt;
-&lt;li&gt;injury&lt;/li&gt;
-&lt;li&gt;technical malfunction&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the face of these obstacles, the early 1920&amp;rsquo;s expeditions were indisputably heroic achievements. From the personalities involved, to the politics of the region, to the sensibilities of the time, &lt;em&gt;Into the Silence&lt;/em&gt; is a very human look at mount Everest and pushing into new frontiers. It is told through Davis&amp;rsquo; flowing prose, and it is a beautiful read. Highly recommended!&lt;/p&gt;
 </description>
     </item>
     
