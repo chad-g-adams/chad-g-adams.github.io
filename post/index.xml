@@ -274,17 +274,32 @@ Day 18
 
 &lt;p&gt;You can also create hotkeys to launch your tests. I do it like:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;key&amp;quot;: &amp;quot;ctrl-s&amp;quot;,
-  &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
-  &amp;quot;args&amp;quot;: &amp;quot;mix test&amp;quot;
-},
-{
-  &amp;quot;key&amp;quot;: &amp;quot;ctrl+shift+s&amp;quot;,
-  &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
-  &amp;quot;args&amp;quot;: &amp;quot;single test&amp;quot;,
-  &amp;quot;when&amp;quot;: &amp;quot;editorTextFocus&amp;quot;
-}
+&lt;pre&gt;&lt;code&gt;[
+   {
+       &amp;quot;key&amp;quot;: &amp;quot;ctrl-s&amp;quot;,
+       &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
+       &amp;quot;args&amp;quot;: &amp;quot;mix test&amp;quot;
+   },
+
+   {
+       &amp;quot;key&amp;quot;: &amp;quot;ctrl+shift+s&amp;quot;,
+       &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
+       &amp;quot;args&amp;quot;: &amp;quot;single test&amp;quot;,
+       &amp;quot;when&amp;quot;: &amp;quot;editorTextFocus&amp;quot;
+   },
+
+   {
+       &amp;quot;key&amp;quot;: &amp;quot;ctrl+shift+w&amp;quot;,
+       &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.runTask&amp;quot;,
+       &amp;quot;args&amp;quot;: &amp;quot;test current file&amp;quot;
+   },
+
+   {
+       &amp;quot;key&amp;quot;: &amp;quot;ctrl+shift+r&amp;quot;,
+       &amp;quot;command&amp;quot;: &amp;quot;workbench.action.tasks.reRunTask&amp;quot;,
+       &amp;quot;when&amp;quot;: &amp;quot;editorTextFocus&amp;quot;
+   }
+]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Now it&amp;rsquo;s super easy to run a single test, or all the tests, on a whim.&lt;/p&gt;
