@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Financial Planning on Chad Adams</title>
+    <link>https://cadams.ca/blog/tags/financial-planning/</link>
+    <description>Recent content in Financial Planning on Chad Adams</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Chad Adams</copyright>
+    <lastBuildDate>Tue, 19 Mar 2019 20:19:16 -0400</lastBuildDate>
+    <atom:link href="https://cadams.ca/blog/tags/financial-planning/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Life Insurance Calculator</title>
+      <link>https://cadams.ca/blog/post/2019/03/19/life-insurance-calculator/</link>
+      <pubDate>Tue, 19 Mar 2019 20:19:16 -0400</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2019/03/19/life-insurance-calculator/</guid>
+      <description>&lt;p&gt;With a baby on the way later this year, it&amp;rsquo;s the first time I&amp;rsquo;ve had to contemplate taking care of a dependent (not counting pets of course). One of the duties in this regard is ensuring that your dependent will be financially supported in the event of your death. Not a pleasant topic to think about, unless maybe you are &lt;a href=&#34;http://www.bbc.com/travel/story/20150408-bhutans-dark-secret-to-happiness&#34;&gt;from Bhutan&lt;/a&gt;, but a necessary one.&lt;/p&gt;
+
+&lt;p&gt;The main question is how much insurance do I need? To answer, I threw together &lt;a href=&#34;https://cadams.ca/blog/images/LifeInsuranceCalculator.ods&#34;&gt;this LibreOffice spreadsheet&lt;/a&gt; as a &amp;ldquo;back of the napkin&amp;rdquo; type calculator. It is definitely only meant as a rough guide and does not rigorously examine inflation nor taxes to a fine precision (although it does take them into account somewhat). The cells in blue are what you will edit to set the parameters for your specific case.&lt;/p&gt;
+
+&lt;p&gt;Losing a parent is probably not going to easy for a child, so I am erring on the side of overcompensation. Post-secondary education is one such example that others might consider optional, but I wanted to ensure it was fully covered.&lt;/p&gt;
+
+&lt;p&gt;I was surprised at the cost of post-secondary education compared to 15-20 years ago. I&amp;rsquo;m not sure what form education will even take in 20 years, but it&amp;rsquo;s hard to imagine the costs continuing to rise and the value proposition still being there in an age of information abundance. Nevertheless, I am including it.&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;both parents die&amp;rdquo; case was also interesting to examine. I thought for sure it would be the worst case scenario, financially speaking, but turns out it&amp;rsquo;s a non-issue when both parents have some retirement savings.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
