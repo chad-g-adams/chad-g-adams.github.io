@@ -7,8 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Fri, 22 Mar 2019 08:50:50 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 10:26:29 -0400</lastBuildDate>
     <atom:link href="https://cadams.ca/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Douglas Rushkoff at Writersfest</title>
+      <link>https://cadams.ca/blog/post/2019/05/11/douglas-rushkoff-at-writersfest/</link>
+      <pubDate>Sat, 11 May 2019 10:26:29 -0400</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2019/05/11/douglas-rushkoff-at-writersfest/</guid>
+      <description>&lt;p&gt;Last weekend I had the pleasure of listening to Douglas Rushkoff speak at the spring edition of the &lt;a href=&#34;https://writersfestival.org/&#34;&gt;Ottawa Writersfest&lt;/a&gt;. Rushkoff is one of my favourite thinkers and host of the &lt;a href=&#34;https://teamhuman.fm/&#34;&gt;&lt;em&gt;Team Human&lt;/em&gt;&lt;/a&gt; podcast, as well as author of the new book &lt;em&gt;Team Human&lt;/em&gt;. Very little prompting was needed by the host to set off intriguing ruminations from Rushkoff about technology, media and society.&lt;/p&gt;
+
+&lt;p&gt;Rushkoff walked us through the medieval inventions of the corporation and growth-based currency (currency that has to be borrowed and paid back with interest), both of which were introduced for the purpose of suppressing the middle class so that the ruling class could preserve their wealth in an increasingly peer-to-peer marketplace environment. These concepts have continued straight through to today and now form the unquestioned &amp;ldquo;operating system&amp;rdquo; upon which our whole economy is built. Rushkoff points to these two as the root cause of many of the strange effects that technology is having on society today, and how tech companies for all their talk of disruption have not considered challenging these basic assumptions.&lt;/p&gt;
+
+&lt;p&gt;Rushkoff talks about reversals that happen with technology (in his own terms, the &lt;em&gt;figure&lt;/em&gt; vs the &lt;em&gt;ground&lt;/em&gt;), whereby over time the users of a technology become themselves used by it (the book goes into this concept much more). Rushkoff draws a parallel between colonization (a term we are familiar with in Canada to describe the structural violence against Indigenous peoples) and the effect that digital technology is having on us today. There is no denying the harm that technology can cause to our wellbeing and to that of society.&lt;/p&gt;
+
+&lt;p&gt;Rushkoff points out that the best consumer is an isolated consumer. As such, growth-based technologies act to push us apart. He recalls watching TV together as a family while growing up, and going to the theatres to watch a movie. These days we consume media in individualistic ways designed to make us more susceptible to surveillance and targeted advertising.&lt;/p&gt;
+
+&lt;p&gt;Rushkoff warns that we can lose our human souls (or just &lt;a href=&#34;https://www.youtube.com/user/JamesBrownOfficial&#34;&gt;soul&lt;/a&gt; with reference to James Brown, for those who don&amp;rsquo;t believe in the former concept) by profit-focused algorithms that try to &amp;ldquo;auto-tune&amp;rdquo; our behaviour so that we better fit our algorithmically predicted buckets. Weirdness is what makes us human, and should be celebrated. Life is everything that happens in between the &amp;ldquo;notes&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;We are warned to think of digital technologies as drugs - you&amp;rsquo;re on Facebook, on Twitter, on-line.. He quotes Timothy Leary:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Before you take a drug, look into the eye of someone who&amp;rsquo;s done that drug. Decide if that&amp;rsquo;s a place you want to be.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We still have the choice not to do so. Rushkoff suggests we try practicing a &lt;em&gt;Tech Sabbath&lt;/em&gt; - consuming no digital technologies on Sundays. Then, level that up further by cutting out cars as well. It&amp;rsquo;s a simple idea but one can easily imagine how that would foster local communities in a serious way.&lt;/p&gt;
+
+&lt;p&gt;Rushkoff peppers the talk with repeated calls to respecting human dignity and human values. He calls on us to make local connections, be a part of &lt;em&gt;Team Human&lt;/em&gt;. &amp;ldquo;Breathe together&amp;rdquo; he instructs us, explaining how this is literally the etymological basis for the term &lt;em&gt;conspire&lt;/em&gt;. And by connecting and interacting offline, face-to-face we are also &lt;em&gt;conspiring&lt;/em&gt; against the companies that are trying to make a buck off our interactions.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>&#34;Smart&#34; City coming to Ottawa?</title>
@@ -836,34 +864,6 @@ dirtcure.com/about/&lt;/p&gt;
 &lt;p&gt;Update:&lt;/p&gt;
 
 &lt;p&gt;Two years later I am still using this system and find it works well for me. One gotcha is at one point my KeePassDroid app on my phone corrupted the password file (software bug that&amp;rsquo;s been fixed, apparently). The file still worked on my phone but I could not unlock the passwords on any other device and I had to rollback to a backup file. So it&amp;rsquo;s important to keep a backup, and also be careful not to overwrite the backup by mistake (everytime I take a backup I put the date in the backup filename like &amp;ldquo;passwords.May2019.kdbx&amp;rdquo;, this is a good practice to follow).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Architectus Oryzus</title>
-      <link>https://cadams.ca/blog/post/2017/03/03/architectus-oryzus/</link>
-      <pubDate>Fri, 03 Mar 2017 16:02:53 -0500</pubDate>
-      
-      <guid>https://cadams.ca/blog/post/2017/03/03/architectus-oryzus/</guid>
-      <description>&lt;p&gt;Martin Fowler wrote &lt;a href=&#34;http://www.in-gmbh.eu/uploads/media/whoNeedsArchitect.pdf&#34;&gt;an article&lt;/a&gt; on software architecture almost 15 years ago. I just discovered it now while in the midst of changing jobs, and I found this part where he contrasts architect styles to be very relevant for me in this moment:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Architectus Reloadus&lt;/em&gt; is the person who makes all the important decisions. The architect does this because a single mind is needed to ensure a system’s conceptual integrity,  and perhaps because the architect doesn’t think that the team members are sufficiently skilled to make those decisions. Often, such decisions must be made early on so that everyone else has a plan to follow.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Architectus Oryzus&lt;/em&gt; is a different kind of animal. This kind of architect must be very aware of what’s going on in the project, looking out for important issues and tackling them before they become a serious problem. When I see an architect like this, the most noticeable part of the work is the intense collaboration. In the morning, the architect programs with a developer, trying to harvest some common locking code. In the afternoon, the architect participates in a requirements session, helping explain to the requirements people the technical consequences of some of their ideas in non-technical terms — such as development costs.&lt;/p&gt;
-
-&lt;p&gt;In many ways, the most important activity of &lt;em&gt;Architectus Oryzus&lt;/em&gt; is to mentor the development team, to raise their level so that they can take on more complex issues. Improving the development team’s ability gives an architect much greater leverage than being the sole decision maker and thus running the risk of being an architectural bottleneck. This leads to the satisfying rule of thumb that an architect’s value is inversely proportional to the number of decisions he or she makes.&lt;/p&gt;
-
-&lt;p&gt;-Martin Fowler in &lt;a href=&#34;http://www.in-gmbh.eu/uploads/media/whoNeedsArchitect.pdf&#34;&gt;Who Needs An Architect?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I think that summarizes very well the role I played for my previous company. Without the benefit of the article&amp;rsquo;s description, I intuitively approached architecture in this way. It&amp;rsquo;s always been clear to me that collaboration is the key to a better product. That means always looking for feedback on designs (earlier the better), and being open to better ideas (often bubbling from the bottom up, sometimes from unexpected places). Raising the level of the development team is crucial, to both increase the pool of critical thinkers available for each problem (huge win), while also reducing the incidence of &amp;ldquo;misguided&amp;rdquo; code submissions (which can become dangerous precedents for future development if left unchecked). There is so much opportunity to learn in both directions.&lt;/p&gt;
-
-&lt;p&gt;Ultimately, looking back on my experience now, if I can be critical in one area, it&amp;rsquo;s that I probably got a bit too involved with the teams at times, leading to over-reliance. I&amp;rsquo;m thinking in particular of the moments when I was overseeing three scrum teams. Teams came to rely on me to do reviews, especially code reviews. Even after raising their level and mentoring them to the point that they were capable of self-organizing and taking on that role themselves, I did not notice anyone rise up to truly champion the cause*. Partly I think, that&amp;rsquo;s because I was performing that role so consistently. Too consistently perhaps. Hence there may be a lesson here about stepping back when the time is right.&lt;/p&gt;
-
-&lt;p&gt;*(At least, the team structures never lasted long enough to see if any champions would finally emerge. I do hope they have gone on to be leaders on their future teams).&lt;/p&gt;
-
-&lt;p&gt;In the end, it was a very rewarding experience with my previous company, and I&amp;rsquo;m looking forward to the new challenges ahead.&lt;/p&gt;
 </description>
     </item>
     
