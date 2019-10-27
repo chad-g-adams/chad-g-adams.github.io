@@ -7,8 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Chad Adams</copyright>
-    <lastBuildDate>Sat, 11 May 2019 10:26:29 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2019 20:11:27 -0400</lastBuildDate>
     <atom:link href="https://cadams.ca/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Resources for New Parents</title>
+      <link>https://cadams.ca/blog/post/2019/10/24/resources-for-new-parents/</link>
+      <pubDate>Thu, 24 Oct 2019 20:11:27 -0400</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2019/10/24/resources-for-new-parents/</guid>
+      <description>
+
+&lt;p&gt;Having recently gone through the birth of our first child, the following were helpful resources that I felt worth documenting here:&lt;/p&gt;
+
+&lt;h1 id=&#34;the-birth-partner:2bf8776aa6ac3a9c0d1bf0301d9e6345&#34;&gt;The Birth Partner&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;&amp;ldquo;A Complete Guide to Childbirth for Dads, Doulas, and All Other Labor Companions&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cadams.ca/blog/images/birthPartner.jpg&#34; alt=&#34;The Birth Partner&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recommended by our midwife. By far the best reference about what goes on during labour and delivery.&lt;/p&gt;
+
+&lt;h1 id=&#34;cribsheet:2bf8776aa6ac3a9c0d1bf0301d9e6345&#34;&gt;Cribsheet&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cadams.ca/blog/images/cribsheet.jpg&#34; alt=&#34;Cribsheet&#34; /&gt;
+&lt;em&gt;&amp;ldquo;A data-driven guide to better, more relaxed parenting&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Released this year, this book takes a data-driven approach to answer all kinds of choices facing parents regarding their newborn. We liked this one for the non-judgmental tone and the evidence-based advice. The author also has another book in the same style which covers pregnancy.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-to-expect-when-you-re-expecting-the-first-year:2bf8776aa6ac3a9c0d1bf0301d9e6345&#34;&gt;What to Expect (When You&amp;rsquo;re Expecting | The First Year)&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cadams.ca/blog/images/whatToExpect.jpg&#34; alt=&#34;What to Expect&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The quintessential classic is a great reference. I use this whenever I want to ask &lt;em&gt;&amp;ldquo;what do most people do&amp;rdquo;&lt;/em&gt;. It really does cover a lot of ground.&lt;/p&gt;
+
+&lt;h1 id=&#34;24-hour-cribside-assistance:2bf8776aa6ac3a9c0d1bf0301d9e6345&#34;&gt;24 Hour Cribside Assistance&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.newdadmanual.ca/&#34;&gt;24 Hour Cribside Assistance&lt;/a&gt; is an online guide for new fathers.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Douglas Rushkoff at Writersfest</title>
@@ -840,30 +877,6 @@ dirtcure.com/about/&lt;/p&gt;
 &lt;p&gt;Another interesting topic was seeing how different people react when externally imposed pressures are applied on them from society at large. Some can&amp;rsquo;t go on, some conform, some thrive in resistance. At times I could see myself in Sparrow. I have been known to become a bit of a chameleon of sorts. But if you can&amp;rsquo;t do the things you love, the things you were meant to do.. who are you, really?&lt;/p&gt;
 
 &lt;p&gt;Ultimately this book won me over by creating very real characters who behaved in ways I did not understand at all. It&amp;rsquo;s powerful to live in someone else&amp;rsquo;s place and be reminded that your way of looking at things is not the only or the best way.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Setting up a (free) Password Manager</title>
-      <link>https://cadams.ca/blog/post/2017/05/07/setting-up-a-free-password-manager/</link>
-      <pubDate>Sun, 07 May 2017 15:39:27 -0400</pubDate>
-      
-      <guid>https://cadams.ca/blog/post/2017/05/07/setting-up-a-free-password-manager/</guid>
-      <description>&lt;p&gt;After years of remaining skeptical about password managers (do I really want to put all my eggs in one basket?), I finally caved after realizing that (a) there were simply too many accounts to remember and (b) my email is effectively a basket holding all the eggs already (anyone who gains access to your email account can use the password reset feature to access your other accounts). With that in mind a password manager didn&amp;rsquo;t seem to increase my risk profile any further from it&amp;rsquo;s current state.&lt;/p&gt;
-
-&lt;p&gt;Companies like the popular &lt;em&gt;1Password&lt;/em&gt; offer cloud-based password management across all your devices.. at a cost. $3/month for their basic plan. I was looking for something cheaper than that. Free, ideally.&lt;/p&gt;
-
-&lt;p&gt;So I found &lt;a href=&#34;http://keepass.info/index.html&#34;&gt;&lt;em&gt;KeePass&lt;/em&gt;&lt;/a&gt;, a lightweight open source password manager. The Windows client is so lightweight you don&amp;rsquo;t even have to install it. It&amp;rsquo;s just an &lt;code&gt;exe&lt;/code&gt; file that sits in a folder. After opening KeePass, you add new entries for each of your passwords, or you can import passwords from other password managers (although I was starting from scratch so I didn&amp;rsquo;t explore this further). The resulting password database is just an encrypted file that is safe to move around.&lt;/p&gt;
-
-&lt;p&gt;If you want to make your passwords available to other devices, you&amp;rsquo;ll need to share this file with those devices. For my purposes, my phone is the only other device I deal with. I installed the Android app &lt;em&gt;KeePassDroid&lt;/em&gt;, copied over the password database by USB, and now I&amp;rsquo;m set.&lt;/p&gt;
-
-&lt;p&gt;The drawback with this approach is it doesn&amp;rsquo;t have cloud sync. I could have hosted my password database in my own cloud if I really wanted to, but actually I&amp;rsquo;ve found a simpler way to sync. These days, I always have my phone nearby! Hence the password database on my phone becomes my primary database, and all edits are done in my phone (it&amp;rsquo;s pretty rare that I have to add or change a password anyway). Then periodically about once a month or so, when I normally backup my phone I also transfer my password database over at the same time.&lt;/p&gt;
-
-&lt;p&gt;This is a very simple approach to password management, but it meets my needs. I guess you can look at it as a cheap alternative to the pay services out there.&lt;/p&gt;
-
-&lt;p&gt;Update:&lt;/p&gt;
-
-&lt;p&gt;Two years later I am still using this system and find it works well for me. One gotcha is at one point my KeePassDroid app on my phone corrupted the password file (software bug that&amp;rsquo;s been fixed, apparently). The file still worked on my phone but I could not unlock the passwords on any other device and I had to rollback to a backup file. So it&amp;rsquo;s important to keep a backup, and also be careful not to overwrite the backup by mistake (everytime I take a backup I put the date in the backup filename like &amp;ldquo;passwords.May2019.kdbx&amp;rdquo;, this is a good practice to follow).&lt;/p&gt;
 </description>
     </item>
     
