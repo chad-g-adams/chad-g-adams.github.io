@@ -40,7 +40,7 @@
 &lt;li&gt;In Windows now, open the File explorer and navigate to the newly added &amp;ldquo;CD Drive&amp;rdquo;. Run the application VBoxWindowsAdditions&lt;/li&gt;
 &lt;li&gt;In VirtualBox menu go to &amp;ldquo;Machine -&amp;gt; Settings -&amp;gt; Shared Folders&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;Add new shared folder. Select the Ubuntu folder you would like to share, and for the mount point you can just put &lt;code&gt;G:&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;G:&lt;/code&gt; location should now appear in Windows File explorer and you can use it like any other folder.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;G:&lt;/code&gt; location should now appear in Windows File Explorer and you can use it like any other folder. (If it doesn&amp;rsquo;t show, check under the &amp;ldquo;Network&amp;rdquo; section of File Explorer)&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
