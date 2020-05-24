@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studiotax on Chad Adams</title>
+    <link>https://cadams.ca/blog/tags/studiotax/</link>
+    <description>Recent content in Studiotax on Chad Adams</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Chad Adams</copyright>
+    <lastBuildDate>Sun, 24 May 2020 14:44:53 -0400</lastBuildDate>
+    <atom:link href="https://cadams.ca/blog/tags/studiotax/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>StudioTax 2019 on Ubuntu</title>
+      <link>https://cadams.ca/blog/post/2020/05/24/studiotax-2019-on-ubuntu/</link>
+      <pubDate>Sun, 24 May 2020 14:44:53 -0400</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2020/05/24/studiotax-2019-on-ubuntu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.studiotax.com&#34;&gt;StudioTax&lt;/a&gt; is free tax software for Canadians. It&amp;rsquo;s pretty great to have this free way to file your taxes, but the supported operating systems are Windows, Mac, iOS and Android.. unfortunately no Linux.&lt;/p&gt;
+
+&lt;p&gt;For &lt;a href=&#34;https://en.wikipedia.org/wiki/Watering_hole_attack&#34;&gt;security reasons&lt;/a&gt;, I never do work with sensitive/confidential information on the same system I use for browsing/social media/general use.. This rules out doing anything tax-related on my phone. But luckily it&amp;rsquo;s quite easy to spin up a secure Ubuntu system on any old laptop or desktop you may have lying around.&lt;/p&gt;
+
+&lt;p&gt;Here is how I got StudioTax running on Ubuntu with VirtualBox:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install Ubuntu 20.04. Make sure you&amp;rsquo;ll have 20-30 GB free disk space after ubuntu is installed (needed to start windows in VirtualBox).&lt;/li&gt;
+&lt;li&gt;Apply all the latest patches on Ubuntu to be sure you have the latest security updates before starting.&lt;/li&gt;
+&lt;li&gt;Install &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download &lt;a href=&#34;https://www.microsoft.com/en-us/software-download/windows10&#34;&gt;Windows 10&lt;/a&gt; ISO file&lt;/li&gt;
+&lt;li&gt;Use VirtualBox to install a Windows 10 system inside of your Ubuntu system. (Link the ISO file into the &amp;ldquo;Storage&amp;rdquo; settings to get the Windows installation going).&lt;/li&gt;
+&lt;li&gt;Once Windows is installed and running, apply all Windows updates to make sure you have the latest security updates before you start.&lt;/li&gt;
+&lt;li&gt;Using Windows now, you can download StudioTax. Install StudioTax as administrator.&lt;/li&gt;
+&lt;li&gt;Good to go!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To transfer files between Ubuntu and Windows, you can do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In VirtualBox menu of the running Windows system, go to &amp;ldquo;Devices -&amp;gt; Insert Guest Additions CD Image&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;In Windows now, open the File explorer and navigate to the newly added &amp;ldquo;CD Drive&amp;rdquo;. Run the application VBoxWindowsAdditions&lt;/li&gt;
+&lt;li&gt;In VirtualBox menu go to &amp;ldquo;Machine -&amp;gt; Settings -&amp;gt; Shared Folders&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Add new shared folder. Select the Ubuntu folder you would like to share, and for the mount point you can just put &lt;code&gt;G:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;G:&lt;/code&gt; location should now appear in Windows File explorer and you can use it like any other folder.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
