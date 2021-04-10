@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Honeycomb on Chad Adams</title>
+    <link>https://cadams.ca/blog/tags/honeycomb/</link>
+    <description>Recent content in Honeycomb on Chad Adams</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Chad Adams</copyright>
+    <lastBuildDate>Thu, 08 Apr 2021 07:36:01 -0400</lastBuildDate>
+    <atom:link href="https://cadams.ca/blog/tags/honeycomb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tracing GitLab builds in Honeycomb</title>
+      <link>https://cadams.ca/blog/post/2021/04/08/tracing-gitlab-builds-in-honeycomb/</link>
+      <pubDate>Thu, 08 Apr 2021 07:36:01 -0400</pubDate>
+      
+      <guid>https://cadams.ca/blog/post/2021/04/08/tracing-gitlab-builds-in-honeycomb/</guid>
+      <description>
+
+&lt;p&gt;By adding observability to your builds you can start to understand where your build time is being spent and how to optimize your builds.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.honeycomb.io/&#34;&gt;Honeycomb&lt;/a&gt; is a fantastic observability platform, and they provide a &lt;a href=&#34;https://github.com/honeycombio/buildevents&#34;&gt;buildevents&lt;/a&gt; tool you can use to instrument your builds. Here is a simple approach to instrumenting a GitLab build pipeline with Honeycomb tracing.&lt;/p&gt;
+
+&lt;h1 id=&#34;step-1-pre-post-build:4402c9a8a44846155fbda4ac86a91fde&#34;&gt;Step 1: Pre/Post build&lt;/h1&gt;
+
+&lt;p&gt;Instrumenting your build requires some work at the start and end of your build. In GitLab one way to achieve this is by introducing a &lt;em&gt;stage&lt;/em&gt; at the start and and the end of your pipeline. Let&amp;rsquo;s call these stages &lt;code&gt;initialization&lt;/code&gt; and &lt;code&gt;tracing&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;stages:
+   - initialization
+   - ...(your regular build stages remain here)...
+   - tracing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The initialization stage sets us up by doing two things:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;storing the start time of the build (to be used later)&lt;/li&gt;
+&lt;li&gt;downloading the &lt;code&gt;buildevents&lt;/code&gt; tool, which is a small binary used for tracing&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These are exposed as artifacts to make them available later in the build. Here is what this stage looks like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;initialization:
+  stage: initialization
+  image: (your preferred image here, this example is based on an alpine image)
+  script:
+    - date +%s &amp;gt;build_start_time
+    - apk add curl
+    - curl -L -o buildevents https://github.com/honeycombio/buildevents/releases/latest/download/buildevents-linux-amd64
+    - chmod 755 buildevents
+  artifacts:
+    paths:
+      - buildevents
+      - build_start_time
+    expire_in: 3 days
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;tracing&lt;/code&gt; stage runs at the end of the build and closes off the trace. A trace URL is printed here so that you can click through the URL to arrive directly at the trace view in Honeycomb!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tracing:
+  stage: tracing
+  script:
+    - export BUILD_ID=$CI_PIPELINE_ID
+    - export BUILD_START_TIME=$(cat ./build_start_time)
+    - traceURL=$(.buildevents build $BUILD_ID $BUILD_START_TIME success)
+    - echo &amp;quot;Honeycomb Trace $traceURL&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;step-2-instrumenting-jobs:4402c9a8a44846155fbda4ac86a91fde&#34;&gt;Step 2: Instrumenting jobs&lt;/h1&gt;
+
+&lt;p&gt;A GitLab build is comprised of multiple jobs. You can create a trace span for each individual GitLab job in your build by doing a bit of work before and after the job. A job template can help with this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.job_template: &amp;amp;traced_job
+before_script:
+  - date +%s &amp;gt; /tmp/job_start_time
+  - apk add bash
+  - export BUILD_ID=$CI_PIPELINE_ID
+  - export STEP_ID=$CI_JOB_ID-$CI_COMMIT_SHORT_SHA
+  - export NAME=$CI_JOB_NAME
+after_script:
+  - export BUILD_ID=$CI_PIPELINE_ID
+  - export STEP_ID=$CI_JOB_ID-$CI_COMMIT_SHORT_SHA
+  - export NAME=$CI_JOB_NAME
+  - export START_TIME=$(cat /tmp/job_start_time)
+  - echo &amp;quot;Sending honeycomb trace for ${NAME} (id= ${STEP_ID}) within ${BUILD_ID} pipeline starting at ${START_TIME}&amp;quot;
+  - ./buildevents step $BUILD_ID $STEP_ID $START_TIME $NAME
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this template defined, adding tracing to your job is as simple as adding a YAML anchor at the start of the job definition:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;compile:
+  &amp;lt;&amp;lt;: *traced_job
+  stage: compile
+  ...
+
+deploy:
+  &amp;lt;&amp;lt;: *traced_job
+  stage: deploy
+  ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;step-3-instrumenting-individual-commands:4402c9a8a44846155fbda4ac86a91fde&#34;&gt;Step 3: Instrumenting individual commands&lt;/h1&gt;
+
+&lt;p&gt;Within a job, there may be several commands that get executed. It can be very helpful to see how long certain commands are taking!&lt;/p&gt;
+
+&lt;p&gt;For example, if the command you&amp;rsquo;re trying to run is &lt;code&gt;mix compile&lt;/code&gt;, you can simply wrap it with a call to &lt;code&gt;buildevents&lt;/code&gt; like so, and supply a name for your trace span:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./buildevents cmd $BUILD_ID $STEP_ID give_a_name_for_this_trace_span -- mix compile
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will create a trace span around the execution of this command.&lt;/p&gt;
+
+&lt;h1 id=&#34;limitations:4402c9a8a44846155fbda4ac86a91fde&#34;&gt;Limitations&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This implementation does not trace failed builds, only successes.&lt;/li&gt;
+&lt;li&gt;It won&amp;rsquo;t capture time spent waiting for a GitLab runner.&lt;/li&gt;
+&lt;li&gt;The artifacts in the &lt;code&gt;initialization&lt;/code&gt; stage are set to expire after 3 days. If someone hits &amp;ldquo;Retry&amp;rdquo; on this build after a time period longer than that, these artifacts will no longer be available and so the build will fail.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;wrap-up:4402c9a8a44846155fbda4ac86a91fde&#34;&gt;Wrap Up&lt;/h1&gt;
+
+&lt;p&gt;This is a simple approach to tracing builds. Despite its limitations, I have found it&amp;rsquo;s sufficient to get me going with tracing and to start me on the path to optimizing my builds.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
